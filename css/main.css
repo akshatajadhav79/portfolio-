@@ -2459,10 +2459,10 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 768px) {
   .inner {
-    padding: 7.5rem 0;
+    padding: 1.5rem 0;
   }
   .inner.inner-grid-top {
-    padding: 4.5rem 0 7.5rem 0;
+    padding: 4.5rem 0 2.5rem 0;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -2478,7 +2478,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 1400px) {
   .inner {
-    padding: 15rem 0 2rem 0;
+    padding: 11rem 0 2rem 0;
   }
   .inner.inner-grid-top {
     padding: 10rem 0 2rem 0;
@@ -2489,7 +2489,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 1600px) {
   .inner {
-    padding: 16rem 0 2rem 0;
+    padding: 5rem 0 2rem 0;
   }
   .inner.inner-grid-top {
     padding: 11rem 0 2rem 0;
@@ -3789,7 +3789,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 768px) {
   .resume-lines__item {
-    padding: 4.4rem 0 4.3rem 0;
+    padding: 1.4rem 0 4.3rem 0;
   }
 }
 @media only screen and (min-width: 1400px) {

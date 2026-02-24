@@ -42,12 +42,15 @@
     <!-- Template Styles End -->
 
     <!-- Custom Browser Color Start -->
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
+    <!-- <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7"> -->
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
     <meta name="msapplication-navbutton-color" content="#111111">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Custom Browser Color End -->
+
+
+
   </head>
 
   <body>
@@ -107,7 +110,6 @@
       <div class="header__controls d-flex justify-content-end">
         <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
         <a id="notify-trigger" class="header__trigger btn" href="mailto:akshata542003@gmail.com?subject=Message%20from%20your%20site">
-        <a id="notify-trigger" class="header__trigger btn" href="mailto:example@example.com?subject=Message%20from%20your%20site">
           <span class="trigger__caption">Let's Talk</span>
           <i class="ph-bold ph-chat-dots"></i>
         </a>
@@ -159,20 +161,20 @@
             </div>
           </div>
           <div class="avatar__image">
-            <img src="img/avatars/1024x1024_a04.webp" alt="Braxton - Personal Portfolio & Resume HTML Template Avatar">
+            <img src="img/avatars/picAJ.jpeg" alt="Braxton - Personal Portfolio & Resume HTML Template Avatar">
           </div>
         </div>
         <!-- data caption #1 -->
         <div class="avatar__block">
           <h6>
-            <small class="top">Specialization:</small>
+            <small class="top"></small>
             Full Stack web developer<br>
           </h6>
         </div>
         <!-- data caption #2 -->
         <div class="avatar__block">
           <h6>
-            <small class="top">Based in : Django, FastAPI</small>
+            <small class="top">Django, FastAPI , LLM</small>
           </h6>
         </div>
         <!-- socials and CTA button -->
@@ -185,9 +187,7 @@
               </li>
               <li class="socials-square__item">
                 <a class="socials-square__link btn" href="mailto:akshata542003@gmail.com?subject=Message%20from%20your%20site" target="_blank"><i class="ph-bold ph-envelope"></i></a>
-                <a class="socials-square__link btn" href="mailto:akshata542003@gmail.com" target="_blank"><i class="ph-bold ph-envelope"></i></a>
               </li>
-              
               <li class="socials-square__item">
                 <a class="socials-square__link btn" href="https://github.com/akshatajadhav79" target="_blank"><i class="ph-bold ph-github-logo"></i></a>
               </li>
@@ -320,17 +320,18 @@
     
                 <!-- Works Gallery Single Item Start -->
                 <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="img/works/1400x1400_w03.webp" data-image="img/works/800_w03-thumb.webp" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
-                    <img src="img/works/800_w03-thumb.webp" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                  <a href="img/works/Swasti-AI.png" data-image="img/works/Swasti-AI.png" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
+                    <img src="img/works/Swasti-AI.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
                   </a>
                   <figcaption class="gallery__descr opposite" itemprop="caption description">
-                    <h5 class="opposite">Wedding Planner</h5>
+                    <h5 class="opposite">Swasti-AI</h5>
                     <div class="card__tags d-flex flex-wrap">
-                      <span class="rounded-tag">Illustrations</span>
-                      <span class="rounded-tag">3D Render</span>
+                      <span class="rounded-tag">FastAPI</span>
+                      <span class="rounded-tag">LLM</span>
+                      <span class="rounded-tag">React</span>
+                      <span class="rounded-tag">MongoDB</span>
                     </div>
-                    <p class="small">Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                      a mollis ipsum tristique eu.
+                    <p class="small">Swasti AI is an AI-powered chatbot application built using FastAPI,React and integrated with LLM models to provide intelligent, real-time responses.
                     </p>
                   </figcaption>
                 </figure>
@@ -338,20 +339,37 @@
     
                 <!-- Works Gallery Single Item Start -->
                 <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="img/works/1400x1400_w04.webp" data-image="img/works/800_w04-thumb.webp" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
-                    <img src="img/works/800_w04-thumb.webp" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                  <a href="img/works/BF.png" data-image="img/works/BF.png" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
+                    <img src="img/works/BF.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
                   </a>
                   <figcaption class="gallery__descr " itemprop="caption description">
-                    <h5>Smart Penguin</h5>
+                    <h5>Build Foridge - Real Estate Application</h5>
                     <div class="card__tags d-flex flex-wrap">
-                      <span class="rounded-tag opposite">Illustrations</span>
-                      <span class="rounded-tag opposite">AI Experiment</span>
+                      <span class="rounded-tag opposite">Django</span>
+                      <span class="rounded-tag opposite">Mysql</span>
                     </div>
-                    <p class="small">Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                      a mollis ipsum tristique eu.
+                    <p class="small">Developed a real estate web application using Python and Django, inspired by 99acres, to enable property listings and advanced search functionality
+                    <a href="https://akshata05.pythonanywhere.com/" class="">Visit..</a></p>
+                  </figcaption>
+                </figure>
+
+                <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="img/works/BF.png" data-image="img/works/BF.png" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
+                    <img src="img/works/BF.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                  </a>
+                  <figcaption class="gallery__descr " itemprop="caption description">
+                    <h5>Wedding Planner</h5>
+                    <div class="card__tags d-flex flex-wrap">
+                      <span class="rounded-tag opposite">Django</span>
+                      <span class="rounded-tag opposite">Mysql</span>
+                      <span class="rounded-tag opposite">python</span>
+                    </div>
+                    <p class="small">Developed a Django-based web application for event planning, enabling users to browse and book vendors such as caterers and photographers
                     </p>
                   </figcaption>
                 </figure>
+
+                
                 <!-- Works Gallery Single Item End -->
     
               </div>
@@ -385,7 +403,7 @@
               <!-- achievements single item -->
               <div class="achievements__item d-flex flex-column grid-item animate-card-3">
                 <div class="achievements__card">
-                  <p class="achievements__number">40+</p>
+                  <p class="achievements__number">4+</p>
                   <p class="achievements__descr">Happy clients</p>
                 </div>
               </div>
@@ -416,15 +434,20 @@
                 <div class="col-12 col-xl-8 grid-item about-descr">
                   
                   <p class="about-descr__text animate-in-up">
-                    I'm a creative soul with a technical edge — blending design, illustration, and full-stack development to build digital experiences that connect and inspire. From crafting beautiful interfaces to building robust backend systems with Django and FastAPI, I bring both aesthetic and functionality to the table.
+                    I’m Akshata Ashok Jadhav, a passionate Python Developer and MCA student with a strong foundation in full-stack development and data-driven solutions. With hands-on experience as a Full Stack Web Developer, I specialize in building scalable web applications using Django, Django REST Framework, FastAPI, and React.
                   </p>
+
                   <p class="about-descr__text animate-in-up">
-                    Whether I’m illustrating a concept, designing a user flow, or coding an API, I believe in creating work that feels meaningful and intuitive. 
-                    <a href="#0" class="text-link">Let’s build something thoughtful</a> — something that looks great and works even better.
+                    I have worked on real-world applications including AI-based systems, real estate platforms, and secure web solutions. From designing REST APIs and implementing authentication (JWT, OAuth) to managing databases like MySQL and MongoDB, I enjoy transforming business requirements into efficient, high-performance solutions.
+                  </p>
+
+                  <p class="about-descr__text animate-in-up">
+                    Alongside development, I actively explore AI technologies including LLMs, LangChain, and OpenAI integrations. I believe in writing clean, optimized code and building applications that are not only functional but meaningful and impactful.
+                    <a href="#0" class="text-link">Let’s build something innovative together.</a>
                   </p>
                   
                   <div class="btn-group about-descr__btnholder animate-in-up">
-                    <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent" href="/CV/Akshata_Jadhav_Resume.pdf" 
+                    <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent" href="img/Akshata_Jadhav_Resume.pdf" 
                     download="Akshata_Jadhav_Resume.pdf">
                       <span class="btn-caption">Download CV</span>
                       <i class="ph-bold ph-download-simple"></i>
@@ -441,12 +464,12 @@
                       Akshata Jadhav
                     </h6>
                   </div>
-                  <div class="about-info__item animate-in-up">
+                  <!-- <div class="about-info__item animate-in-up">
                     <h6>
                       <small class="top">Phone</small>
                       <a class="text-link-bold" href="tel:+12127089400">+91 000-000-0000</a>
                     </h6>
-                  </div>
+                  </div> -->
                   <div class="about-info__item animate-in-up">
                     <h6>
                       <small class="top">Email</small>
@@ -456,7 +479,7 @@
                   <div class="about-info__item animate-in-up">
                     <h6>
                       <small class="top">Location</small>
-                      <a class="text-link-bold" href="https://maps.app.goo.gl/xMJXTEUeHkv6kYRQ6" target="_blank">Kolhapur, Pune</a>
+                      <a class="text-link-bold" href="" target="_blank">Kolhapur, Pune</a>
                     </h6>
                   </div>
                 </div>
@@ -466,50 +489,6 @@
             </div>
           </div>
           <!-- Content Block - About Me Data End -->
-
-          <!-- Content Block - Services Start -->
-          <div class="content__block grid-block">
-            <div class="container-fluid p-0">
-              <div class="row g-0 align-items-stretch cards">
-                <!-- services cards grid single item -->
-                <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
-                  <div class="cards__card d-flex flex-column">
-                    <div class="cards__descr">
-                      <h4 class="cards__title animate-in-up">Frontend<br>development</h4>
-                      <div class="cards__tags d-flex flex-wrap animate-in-up">
-                        <span class="rounded-tag tag-outline">UI/UX Design</span>
-                        <span class="rounded-tag tag-outline">Design to Code</span>
-                      </div>
-                      <p class="small cards__text animate-in-up">I work with HTML/CSS and Bootstrap.</p>
-                    </div>
-                    <div class="cards__image d-flex animate-in-up">
-                      <img src="img/services/1200x900_s01.webp" alt="Service/Feature Image">
-                    </div>
-                  </div>
-                </div>
-                <!-- services grid cards single item -->
-                <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
-                  <div class="cards__card d-flex flex-column">
-                    <div class="cards__descr">
-                      <h4 class="cards__title animate-in-up">Backend <br>development</h4>
-                      <div class="cards__tags d-flex flex-wrap animate-in-up">
-                        <span class="rounded-tag tag-outline">Handling API</span>
-                        <span class="rounded-tag tag-outline">Dynamic Response</span>
-                      </div>
-                      <p class="small cards__text animate-in-up">I work with Python/Django and Mysql/MongoDB.</p>
-                    </div>
-                    <div class="cards__image d-flex">
-                      <img src="img/services/1200x900_s03.webp" alt="Service/Feature Image">
-                    </div>
-                  </div>
-                </div>
-                
-    
-              </div>
-            </div>
-          </div>
-          <!-- Content Block - Services End -->
-
         </section>
         <!-- About Section End -->
 
@@ -551,28 +530,28 @@
               <!-- MCA -->
               <div class="row g-0 resume-lines__item animate-in-up">
                 <div class="col-12 col-md-2">
-                  <span class="resume-lines__date animate-in-up">2021 - 2023</span>
+                  <span class="resume-lines__date animate-in-up">2024 - 2026</span>
                 </div>
                 <div class="col-12 col-md-5">
-                  <h5 class="resume-lines__title animate-in-up">Master of Computer Application (M.C.A)</h5>
-                  <p class="resume-lines__source animate-in-up">Savitribai Phule Pune University</p>
+                  <h5 class="resume-lines__title animate-in-up">Master of Computer Application (MCA)</h5>
+                  <p class="resume-lines__source animate-in-up">Savitribai Phule University Pune</p>
                 </div>
                 <div class="col-12 col-md-5">
-                  <p class="small resume-lines__descr animate-in-up">Graduated with an SGPA of 8.31, focusing on advanced programming, software engineering, and data-driven development.</p>
+                  <p class="small resume-lines__descr animate-in-up">Graduated with an SGPA of 8.58, focusing on advanced programming, software engineering, and data-driven development.</p>
                 </div>
               </div>
             
               <!-- B.Sc. Computer Science -->
               <div class="row g-0 resume-lines__item animate-in-up">
                 <div class="col-12 col-md-2">
-                  <span class="resume-lines__date animate-in-up">2019 - 2024</span>
+                  <span class="resume-lines__date animate-in-up">2021 - 2024</span>
                 </div>
                 <div class="col-12 col-md-5">
-                  <h5 class="resume-lines__title animate-in-up">Bachelor of Science in Computer Science (B.Sc)</h5>
+                  <h5 class="resume-lines__title animate-in-up">Bachelor of Computer Application (BCA)</h5>
                   <p class="resume-lines__source animate-in-up">Shivaji University, Kolhapur</p>
                 </div>
                 <div class="col-12 col-md-5">
-                  <p class="small resume-lines__descr animate-in-up">Completed with 83.69% marks, gaining strong foundations in core programming, algorithms, and system design.</p>
+                  <p class="small resume-lines__descr animate-in-up">Completed with 83.63% marks, gaining strong foundations in core programming, algorithms, and system design.</p>
                 </div>
               </div>
             
@@ -583,7 +562,7 @@
                 </div>
                 <div class="col-12 col-md-5">
                   <h5 class="resume-lines__title animate-in-up">H.S.C. (12th Grade)</h5>
-                  <p class="resume-lines__source animate-in-up">Maharashtra State Board, Pune</p>
+                  <p class="resume-lines__source animate-in-up">Maharashtra State Board, Kolhapur</p>
                 </div>
                 <div class="col-12 col-md-5">
                   <p class="small resume-lines__descr animate-in-up">Achieved 86.50% with a focus on science and mathematics, laying the groundwork for a tech-focused career.</p>
@@ -597,7 +576,7 @@
                 </div>
                 <div class="col-12 col-md-5">
                   <h5 class="resume-lines__title animate-in-up">S.S.C. (10th Grade)</h5>
-                  <p class="resume-lines__source animate-in-up">Maharashtra State Board, Pune</p>
+                  <p class="resume-lines__source animate-in-up">Maharashtra State Board, Kolhapur</p>
                 </div>
                 <div class="col-12 col-md-5">
                   <p class="small resume-lines__descr animate-in-up">Successfully completed with 85.50%, developing early interest in problem-solving and computer science.</p>
@@ -625,18 +604,18 @@
           
               <!-- Full Stack Web Developer -->
               <div class="row g-0 resume-lines__item animate-in-up">
-                <div class="col-12 col-md-2">
-                  <span class="resume-lines__date animate-in-up">4 Aug 2023 – 5 Apr 2024</span>
+                <div class="">
+                  <span class="resume-lines__date animate-in-up">4 Aug 2023 – 26 Sep 2024</span>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="">
                   <h5 class="resume-lines__title animate-in-up">Full Stack Web Developer</h5>
                   <p class="resume-lines__source animate-in-up">at 
-                    <a href="#0" class="text-link-bold" target="_blank">One IT Solutions Pvt. Ltd.</a>
+                    <a href="#0" class="text-link-bold" target="_blank">One IT Solutions Pvt.Ltd.</a>
                   </p>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="">
                   <p class="small resume-lines__descr animate-in-up">
-                    Developed and maintained dynamic web applications using Django and FastAPI. Worked on both frontend (HTML, CSS, Bootstrap) and backend logic, building dashboards, APIs, and admin panels for real-time user interaction and system efficiency.
+                    Developed and maintained scalable web applications using Django, Django REST Framework, and FastAPI, delivering secure and high-performance backend solutions. Designed and implemented RESTful APIs, authentication systems (JWT, OAuth), and role-based access controls to enhance application security. Collaborated with cross-functional teams to translate business requirements into efficient, production-ready features. Managed relational and non-relational databases including MySQL, SQLite, and MongoDB, ensuring data integrity and optimized query performance. Contributed across the full SDLC — from system design and development to testing and deployment — while building responsive frontend interfaces using HTML, CSS, and Bootstrap for seamless user experiences.
                   </p>
                 </div>
               </div>
@@ -661,6 +640,33 @@
             <!-- Tools List Start -->
             <div class="tools-cards d-flex justify-content-start flex-wrap">
   <!-- Tool Item Template -->
+   <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/icons/icons8-python.svg" alt="Python Icon">
+      <h6 class="tools-cards__caption animate-in-up">Python</h6>
+    </div>
+  </div>
+
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/icons/icons8-django.svg" alt="Django Icon">
+      <h6 class="tools-cards__caption animate-in-up">Django</h6>
+    </div>
+  </div>
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+  <div class="tools-cards__card" >
+    <img class="tools-cards__icon animate-in-up" src="img/icons/api.png" alt="Web API Icon" style="width:130px; height: 70px; object-fit: contain; margin-bottom:0;">
+    <h6 class="tools-cards__caption animate-in-up" >Web API</h6>
+  </div>
+</div>
+
+  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+    <div class="tools-cards__card">
+      <img class="tools-cards__icon animate-in-up" src="img/icons/LLM.png" alt="HTML5 Icon">
+      <h6 class="tools-cards__caption animate-in-up">LLM</h6>
+    </div>
+  </div>
+
   <div class="tools-cards__item d-flex grid-item-s animate-card-5">
     <div class="tools-cards__card">
       <img class="tools-cards__icon animate-in-up" src="img/icons/icon-html.svg" alt="HTML5 Icon">
@@ -682,19 +688,7 @@
     </div>
   </div>
 
-  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-    <div class="tools-cards__card">
-      <img class="tools-cards__icon animate-in-up" src="img/icons/icons8-python.svg" alt="Python Icon">
-      <h6 class="tools-cards__caption animate-in-up">Python</h6>
-    </div>
-  </div>
-
-  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-    <div class="tools-cards__card">
-      <img class="tools-cards__icon animate-in-up" src="img/icons/icons8-django.svg" alt="Django Icon">
-      <h6 class="tools-cards__caption animate-in-up">Django</h6>
-    </div>
-  </div>
+  
 
   <div class="tools-cards__item d-flex grid-item-s animate-card-5">
     <div class="tools-cards__card">
@@ -738,12 +732,7 @@
     </div>
   </div>
 
-  <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-  <div class="tools-cards__card" >
-    <img class="tools-cards__icon animate-in-up" src="img/icons/api.png" alt="Web API Icon" style="width: 90px; height: 90px; object-fit: contain; margin-bottom: 0.5rem;">
-    <h6 class="tools-cards__caption animate-in-up" style="margin-top: 0.5rem; font-size: 14px; font-weight: 600; color: #333;">Web API</h6>
-  </div>
-</div>
+  
 
 
   <div class="tools-cards__item d-flex grid-item-s animate-card-5">
@@ -808,9 +797,9 @@
                     <div class="col-12 col-md-6 form__item animate-in-up">
                       <input type="email" name="E-mail" placeholder="Email Adress*" required>
                     </div>
-                    <div class="col-12 col-md-6 form__item animate-in-up">
+                    <!-- <div class="col-12 col-md-6 form__item animate-in-up">
                       <input type="tel" name="Phone" placeholder="Phone Number*" required>
-                    </div>
+                    </div> -->
                     <div class="col-12 form__item animate-in-up">
                       <textarea name="Message" placeholder="A Few Words*" required></textarea>
                     </div>
@@ -856,17 +845,17 @@
                   </p>
                 </div>
                 <!-- data item -->
-                <div class="col-12 col-md-4 contact-lines__data">
+                <!-- <div class="col-12 col-md-4 contact-lines__data">
                   <p class="contact-lines__title animate-in-up">Phone</p>
                   <p class="contact-lines__text animate-in-up">
                     <a class="text-link-bold" href="tel:+12127089400">+91 000-000-0000</a>
                   </p>
-                </div>
+                </div> -->
                 <!-- data item -->
                 <div class="col-12 col-md-4 contact-lines__data">
                   <p class="contact-lines__title animate-in-up">Email</p>
                   <p class="contact-lines__text animate-in-up">
-                    <a class="text-link-bold" href="mailto:example@example.com?subject=Message%20from%20your%20site">akshata542003@gmail.com</a>
+                    <a class="text-link-bold" href="mailto:akshata542003@gmail.com?subject=Message%20from%20your%20site">akshata542003@gmail.com</a>
                   </p>
                 </div>
               </div>
@@ -950,6 +939,10 @@
     <script src="js/app.js"></script>
     <script src="js/gallery-init.js"></script>
     <!-- Load Scripts End -->
+
+    
+    <!-- typed text Animation -->
+     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
     
   </body>
 
