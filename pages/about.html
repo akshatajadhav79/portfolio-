@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me — Akshata Jadhav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/plugins.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <style>
+    /* ════════════════════════════════════════════════════
+       BLUE GRADIENT DESIGN SYSTEM — Akshata Jadhav
+       Font: Plus Jakarta Sans (Professional, Modern)
+       Palette: Deep Navy · Royal Blue · Sky Blue
+    ════════════════════════════════════════════════════ */
+
+    /* ── Universal font override ─────────────────────── */
+    *, body, h1,h2,h3,h4,h5,h6,p,span,a,li,button,input,textarea,select,
+    .menu__link,.btn,.btn-caption,.headline__title,.headline__subtitle,
+    .h2__title,.h2__subtitle,.h2__text,.h3__title,.about-descr__text,
+    .resume-lines__title,.resume-lines__source,.resume-lines__descr,.resume-lines__date,
+    .achievements__number,.achievements__descr,.tools-cards__caption,.teaser__text,
+    .contact-lines__title,.contact-lines__text,.logo__caption p,.avatar__block h6,
+    .gallery__descr h5,.small,.rounded-tag,.trigger__caption,.menu__caption,
+    .pg-title,.pg-subtitle,.pg-label,.back-link,.form-label,.sec-title,
+    .tl-title,.tl-org,.tl-desc,.tl-date,.sec-h h2,.tool-pill,
+    .proj-title,.proj-desc,.proj-category,.filter-btn,
+    .mw-section-title,.mw-section-desc,.research-title,.research-abstract,
+    .info-label,.info-value,.avail-text,.avail-sub,.social-link-label,.social-link-handle,
+    .stat-number,.stat-label,.skill-chip,.skill-group-label,
+    .interest-title,.interest-desc,.about-card-label,.about-card-value,
+    .cert-title,.cert-org,.cert-date,.cert-desc,.cert-name {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Page title gradient ─────────────────────────── */
+    .pg-title {
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    /* ── Main headline (index) ───────────────────────── */
+    .headline__title {
+      font-size: clamp(36px,5.5vw,68px) !important;
+      font-weight: 800 !important;
+      line-height: 1.06 !important;
+      letter-spacing: -0.025em !important;
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    /* ── Section headings ────────────────────────────── */
+    .h2__title, .mw-section-title, .sec-title {
+      font-weight: 800 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    /* ── Stat / achievement numbers ──────────────────── */
+    .stat-number, .achievements__number {
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      font-weight: 800 !important;
+    }
+
+    /* ── Dividers ─────────────────────────────────────── */
+    .pg-divider, .mw-divider {
+      background: linear-gradient(90deg, #2563EB, #38BDF8) !important;
+    }
+
+    /* ── Card hover glow ─────────────────────────────── */
+    .proj-card:hover, .info-card:hover, .interest-card:hover,
+    .stat-card:hover, .award-card:hover, .research-card:hover {
+      border-color: #2563EB !important;
+      box-shadow: 0 16px 48px rgba(37,99,235,.2) !important;
+    }
+
+    /* ── Filter active ───────────────────────────────── */
+    .filter-btn.active, .filter-btn:hover {
+      background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important;
+      border-color: transparent !important;
+    }
+
+    /* ── Form focus ──────────────────────────────────── */
+    .form-input:focus, .form-textarea:focus {
+      border-color: #2563EB !important;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.15) !important;
+    }
+
+    /* ── Download bar ────────────────────────────────── */
+    .dl-bar { background: linear-gradient(135deg, #1D4ED8 0%, #38BDF8 100%) !important; }
+    .dl-btn { color: #1D4ED8 !important; }
+
+    /* ── Social hover ────────────────────────────────── */
+    .social-link:hover { border-color: #2563EB !important; }
+
+    /* ── Availability dot pulse ──────────────────────── */
+    .avail-dot { background: #38BDF8 !important; }
+    @keyframes pulse-blue {
+      0%,100%{box-shadow:0 0 0 0 rgba(56,189,248,.5)}
+      50%{box-shadow:0 0 0 7px rgba(56,189,248,0)}
+    }
+    .avail-dot { animation: pulse-blue 2s infinite !important; }
+
+    /* ── Icon backgrounds ────────────────────────────── */
+    .research-icon, .cert-icon {
+      background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important;
+    }
+
+    /* ── Skill chip dot ──────────────────────────────── */
+    .skill-chip-dot { background: #38BDF8 !important; }
+    .skill-chip:hover { border-color: #2563EB !important; color: #2563EB !important; }
+    .tool-pill:hover { border-color: #2563EB !important; color: #2563EB !important; }
+
+    /* ── Tl score pill ───────────────────────────────── */
+    .tl-score { background: rgba(37,99,235,.14) !important; color: #60A5FA !important; }
+
+    /* ── Submit button ───────────────────────────────── */
+    .submit-btn { background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important; }
+
+    /* ── Success message ─────────────────────────────── */
+    .success-msg { background:#eff6ff !important; border-color:#bfdbfe !important; }
+    .success-msg p { color: #1D4ED8 !important; }
+
+    /* ── Proj thumb placeholder gradients ────────────── */
+    .proj-thumb { background: linear-gradient(135deg,#1e3a8a,#2563EB) !important; }
+
+    .pg-wrap { max-width: 980px; margin: 0 auto; padding: 56px 28px 100px; }
+    .back-link { display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-bottom:52px;transition:gap .2s; }
+    .back-link:hover { gap:14px; }
+    .pg-label { display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px; }
+    .pg-title { font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.12;margin:0 0 14px; }
+    .pg-divider { width:52px;height:3px;margin-top:24px;margin-bottom:56px;background:linear-gradient(90deg,#2563EB,#38BDF8);border-radius:4px; }
+
+    /* Hero layout */
+    .about-hero { display:grid;grid-template-columns:1fr 340px;gap:56px;margin-bottom:72px;align-items:start; }
+    @media(max-width:768px){ .about-hero { grid-template-columns:1fr; } }
+    .about-text p { font-size:15px;line-height:1.85;color:var(--text-2);margin-bottom:20px; }
+    .about-text p:last-child { margin-bottom:0; }
+    .about-card { background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px; }
+    .about-card-item { padding:14px 0;border-bottom:1px solid var(--border); }
+    .about-card-item:last-child { border-bottom:none;padding-bottom:0; }
+    .about-card-label { font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:4px; }
+    .about-card-value { font-size:14px;font-weight:600; }
+    .about-card-value a { color:var(--accent);text-decoration:none; }
+
+    /* Stats */
+    .stats-row { display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:72px; }
+    @media(max-width:600px){ .stats-row { grid-template-columns:repeat(2,1fr); } }
+    .stat-card { background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 20px;text-align:center;transition:border-color .25s,transform .25s; }
+    .stat-card:hover { border-color:var(--accent);transform:translateY(-3px); }
+    .stat-number { font-size:36px;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1; }
+    .stat-label { font-size:12px;color:var(--text-2);margin-top:6px;font-weight:600; }
+
+    /* Skills section */
+    .skills-section { margin-bottom:72px; }
+    .sec-title { font-size:clamp(20px,3vw,28px);font-weight:800;margin:0 0 32px; }
+    .skill-group { margin-bottom:32px; }
+    .skill-group-label { font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px; }
+    .skill-chips { display:flex;flex-wrap:wrap;gap:10px; }
+    .skill-chip { display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;padding:8px 16px;border-radius:25px;border:1px solid var(--border);background:var(--card);transition:all .2s; }
+    .skill-chip:hover { border-color:var(--accent);color:var(--accent); }
+    .skill-chip-dot { width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0; }
+
+    /* Interests */
+    .interests-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:72px; }
+    .interest-card { background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;text-align:center;transition:border-color .25s,transform .25s; }
+    .interest-card:hover { border-color:var(--accent);transform:translateY(-3px); }
+    .interest-icon { font-size:32px;margin-bottom:10px; }
+    .interest-title { font-size:14px;font-weight:700;margin-bottom:4px; }
+    .interest-desc { font-size:12px;color:var(--text-2);line-height:1.5; }
+  </style>
+
+  <!-- Google Fonts — Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header d-flex justify-content-between">
+    <div class="header__navigation">
+      <nav id="menu" class="menu">
+        <ul class="menu__list d-flex justify-content-start">
+          <li class="menu__item"><a class="menu__link btn" href="../index.html"><span class="menu__caption">Home</span><i class="ph-bold ph-house-simple"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="portfolio.html"><span class="menu__caption">Portfolio</span><i class="ph-bold ph-squares-four"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="my_work.html"><span class="menu__caption">My Work</span><i class="ph-bold ph-briefcase"></i></a></li>
+          <li class="menu__item menu__item--active"><a class="menu__link btn" href="about.html"><span class="menu__caption">About Me</span><i class="ph-bold ph-user"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="resume.html"><span class="menu__caption">Resume</span><i class="ph-bold ph-article"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="contact.html"><span class="menu__caption">Contact</span><i class="ph-bold ph-envelope"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__controls d-flex justify-content-end">
+      <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+      <a class="header__trigger btn" href="mailto:akshata542003@gmail.com?subject=Message%20from%20your%20site"><span class="trigger__caption">Let's Talk</span><i class="ph-bold ph-chat-dots"></i></a>
+    </div>
+  </header>
+
+  <div class="pg-wrap">
+    <a class="back-link" href="../index.html"><i class="ph-bold ph-arrow-left"></i> Back to Home</a>
+
+    <p class="pg-label">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="currentColor"><path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/></svg>
+      About Me
+    </p>
+    <h1 class="pg-title">Passionate Developer.<br>Creative Problem Solver.</h1>
+    <div class="pg-divider"></div>
+
+    <!-- Hero -->
+    <div class="about-hero">
+      <div class="about-text">
+        <p>Hi, I'm <strong>Akshata Ashok Jadhav</strong> — a Python Developer and MCA student at Savitribai Phule Pune University (SGPA: 8.58) with 1+ year of professional experience building scalable full-stack web applications.</p>
+        <p>I specialize in backend development with Django and FastAPI, and I'm passionate about integrating AI and LLM technologies into real-world products. I've built everything from real estate platforms and attendance systems to AI-powered database chatbots with voice input and rollback features.</p>
+        <p>Beyond code, I care deeply about clean architecture, user experience, and writing software that is not just functional — but meaningful. I enjoy bridging the gap between complex backend logic and intuitive frontend experiences.</p>
+        <p>Currently exploring the frontier of AI development — prompt engineering, RAG pipelines, LangChain, and local LLM deployment with Ollama. Always learning, always building.</p>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn btn-default btn-hover btn-hover-accent" href="../img/Akshata_Jadhav_Resume.pdf" download><span class="btn-caption">Download CV</span><i class="ph-bold ph-download-simple"></i></a>
+          <a class="btn btn-default btn-hover btn-hover-outline" href="contact.html"><span class="btn-caption">Contact Me</span><i class="ph-bold ph-envelope"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="about-card">
+          <div class="about-card-item" style="padding-top:0;">
+            <p class="about-card-label">Name</p>
+            <p class="about-card-value">Akshata Ashok Jadhav</p>
+          </div>
+          <div class="about-card-item">
+            <p class="about-card-label">Location</p>
+            <p class="about-card-value">Kolhapur / Pune, Maharashtra</p>
+          </div>
+          <div class="about-card-item">
+            <p class="about-card-label">Education</p>
+            <p class="about-card-value">MCA — SPPU (SGPA 8.58)</p>
+          </div>
+          <div class="about-card-item">
+            <p class="about-card-label">Experience</p>
+            <p class="about-card-value">1+ Year · Full Stack Dev</p>
+          </div>
+          <div class="about-card-item">
+            <p class="about-card-label">Email</p>
+            <p class="about-card-value"><a href="mailto:akshata542003@gmail.com">akshata542003@gmail.com</a></p>
+          </div>
+          <div class="about-card-item">
+            <p class="about-card-label">GitHub</p>
+            <p class="about-card-value"><a href="https://github.com/akshatajadhav79" target="_blank">akshatajadhav79</a></p>
+          </div>
+          <div class="about-card-item">
+            <p class="about-card-label">Available for</p>
+            <p class="about-card-value" style="color:var(--accent);">Freelance · Full-time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-number">1+</div><div class="stat-label">Years Experience</div></div>
+      <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Projects Built</div></div>
+      <div class="stat-card"><div class="stat-number">4+</div><div class="stat-label">Happy Clients</div></div>
+      <div class="stat-card"><div class="stat-number">🏆</div><div class="stat-label">Hackathon Winner</div></div>
+    </div>
+
+    <!-- Skills -->
+    <div class="skills-section">
+      <h2 class="sec-title">Technical Skills</h2>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Backend Development</p>
+        <div class="skill-chips">
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Python</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Django</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>FastAPI</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Django REST Framework</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Flask</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>REST APIs</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>JWT / OAuth</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Frontend</p>
+        <div class="skill-chips">
+          <span class="skill-chip"><span class="skill-chip-dot"></span>React.js</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>HTML5</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>CSS3</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>JavaScript</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Bootstrap</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Vite</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Databases & ORM</p>
+        <div class="skill-chips">
+          <span class="skill-chip"><span class="skill-chip-dot"></span>MySQL</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>MongoDB</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>SQLite</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>SQLAlchemy</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Django ORM</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">AI / LLM</p>
+        <div class="skill-chips">
+          <span class="skill-chip"><span class="skill-chip-dot"></span>LangChain</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>OpenAI API</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Groq API</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Ollama</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Prompt Engineering</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>RAG</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Data Science & CV</p>
+        <div class="skill-chips">
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Pandas</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>NumPy</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Matplotlib</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>OpenCV</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>face_recognition</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Tools & DevOps</p>
+        <div class="skill-chips">
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Git</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>GitHub</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>VS Code</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Postman</span>
+          <span class="skill-chip"><span class="skill-chip-dot"></span>Docker (basic)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interests -->
+    <h2 class="sec-title">Interests &amp; Passions</h2>
+    <div class="interests-grid">
+      <div class="interest-card">
+        <div class="interest-icon">🤖</div>
+        <div class="interest-title">AI & LLMs</div>
+        <div class="interest-desc">Building intelligent systems with large language models and prompt engineering</div>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">🏗️</div>
+        <div class="interest-title">System Design</div>
+        <div class="interest-desc">Designing scalable, clean backend architectures and REST APIs</div>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">🎨</div>
+        <div class="interest-title">Brand Design</div>
+        <div class="interest-desc">Creating meaningful logo and visual identities for tech products</div>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">📚</div>
+        <div class="interest-title">Research</div>
+        <div class="interest-desc">Publishing papers on AI, NLP, and computer vision applications</div>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">🏆</div>
+        <div class="interest-title">Hackathons</div>
+        <div class="interest-desc">Competing and winning — 1st Prize at college-level hackathon</div>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">🌐</div>
+        <div class="interest-title">Open Source</div>
+        <div class="interest-desc">Contributing to community projects and sharing knowledge on GitHub</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;padding:56px 0 20px;">
+      <center>
+      <h2 style="font-size:clamp(22px,4vw,32px);font-weight:800;margin:0 0 14px;">Let's work together!</h2></center>
+      <p style="color:var(--text-2);font-size:15px;max-width:440px;margin:0 auto 28px;line-height:1.75;">Whether it's a full-stack app, an AI integration, or a quick consultation — I'd love to connect.</p>
+      <a class="btn btn-default btn-hover btn-hover-accent" href="contact.html"><span class="btn-caption">Get in Touch</span><i class="ph-bold ph-envelope"></i></a>
+    </div>
+  </div>
+
+  <script src="../js/libs.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

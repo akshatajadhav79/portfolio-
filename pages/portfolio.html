@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio — Akshata Jadhav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/plugins.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <style>
+    /* ════════════════════════════════════════════════════
+       BLUE GRADIENT DESIGN SYSTEM — Akshata Jadhav
+       Font: Plus Jakarta Sans (Professional, Modern)
+       Palette: Deep Navy · Royal Blue · Sky Blue
+    ════════════════════════════════════════════════════ */
+
+    /* ── Universal font override ─────────────────────── */
+    *, body, h1,h2,h3,h4,h5,h6,p,span,a,li,button,input,textarea,select,
+    .menu__link,.btn,.btn-caption,.headline__title,.headline__subtitle,
+    .h2__title,.h2__subtitle,.h2__text,.h3__title,.about-descr__text,
+    .resume-lines__title,.resume-lines__source,.resume-lines__descr,.resume-lines__date,
+    .achievements__number,.achievements__descr,.tools-cards__caption,.teaser__text,
+    .contact-lines__title,.contact-lines__text,.logo__caption p,.avatar__block h6,
+    .gallery__descr h5,.small,.rounded-tag,.trigger__caption,.menu__caption,
+    .pg-title,.pg-subtitle,.pg-label,.back-link,.form-label,.sec-title,
+    .tl-title,.tl-org,.tl-desc,.tl-date,.sec-h h2,.tool-pill,
+    .proj-title,.proj-desc,.proj-category,.filter-btn,
+    .mw-section-title,.mw-section-desc,.research-title,.research-abstract,
+    .info-label,.info-value,.avail-text,.avail-sub,.social-link-label,.social-link-handle,
+    .stat-number,.stat-label,.skill-chip,.skill-group-label,
+    .interest-title,.interest-desc,.about-card-label,.about-card-value,
+    .cert-title,.cert-org,.cert-date,.cert-desc,.cert-name {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Page title gradient ─────────────────────────── */
+    .pg-title {
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    /* ── Main headline (index) ───────────────────────── */
+    .headline__title {
+      font-size: clamp(36px,5.5vw,68px) !important;
+      font-weight: 800 !important;
+      line-height: 1.06 !important;
+      letter-spacing: -0.025em !important;
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    /* ── Section headings ────────────────────────────── */
+    .h2__title, .mw-section-title, .sec-title {
+      font-weight: 800 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    /* ── Stat / achievement numbers ──────────────────── */
+    .stat-number, .achievements__number {
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      font-weight: 800 !important;
+    }
+
+    /* ── Dividers ─────────────────────────────────────── */
+    .pg-divider, .mw-divider {
+      background: linear-gradient(90deg, #2563EB, #38BDF8) !important;
+    }
+
+    /* ── Card hover glow ─────────────────────────────── */
+    .proj-card:hover, .info-card:hover, .interest-card:hover,
+    .stat-card:hover, .award-card:hover, .research-card:hover {
+      border-color: #2563EB !important;
+      box-shadow: 0 16px 48px rgba(37,99,235,.2) !important;
+    }
+
+    /* ── Filter active ───────────────────────────────── */
+    .filter-btn.active, .filter-btn:hover {
+      background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important;
+      border-color: transparent !important;
+    }
+
+    /* ── Form focus ──────────────────────────────────── */
+    .form-input:focus, .form-textarea:focus {
+      border-color: #2563EB !important;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.15) !important;
+    }
+
+    /* ── Download bar ────────────────────────────────── */
+    .dl-bar { background: linear-gradient(135deg, #1D4ED8 0%, #38BDF8 100%) !important; }
+    .dl-btn { color: #1D4ED8 !important; }
+
+    /* ── Social hover ────────────────────────────────── */
+    .social-link:hover { border-color: #2563EB !important; }
+
+    /* ── Availability dot pulse ──────────────────────── */
+    .avail-dot { background: #38BDF8 !important; }
+    @keyframes pulse-blue {
+      0%,100%{box-shadow:0 0 0 0 rgba(56,189,248,.5)}
+      50%{box-shadow:0 0 0 7px rgba(56,189,248,0)}
+    }
+    .avail-dot { animation: pulse-blue 2s infinite !important; }
+
+    /* ── Icon backgrounds ────────────────────────────── */
+    .research-icon, .cert-icon {
+      background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important;
+    }
+
+    /* ── Skill chip dot ──────────────────────────────── */
+    .skill-chip-dot { background: #38BDF8 !important; }
+    .skill-chip:hover { border-color: #2563EB !important; color: #2563EB !important; }
+    .tool-pill:hover { border-color: #2563EB !important; color: #2563EB !important; }
+
+    /* ── Tl score pill ───────────────────────────────── */
+    .tl-score { background: rgba(37,99,235,.14) !important; color: #60A5FA !important; }
+
+    /* ── Submit button ───────────────────────────────── */
+    .submit-btn { background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important; }
+
+    /* ── Success message ─────────────────────────────── */
+    .success-msg { background:#eff6ff !important; border-color:#bfdbfe !important; }
+    .success-msg p { color: #1D4ED8 !important; }
+
+    /* ── Proj thumb placeholder gradients ────────────── */
+    .proj-thumb { background: linear-gradient(135deg,#1e3a8a,#2563EB) !important; }
+
+    .pg-wrap { max-width: 980px; margin: 0 auto; padding: 56px 28px 100px; }
+    .back-link { display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-bottom:52px;transition:gap .2s; }
+    .back-link:hover { gap:14px; }
+    .pg-label { display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px; }
+    .pg-title { font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.12;margin:0 0 14px; }
+    .pg-subtitle { font-size:15px;line-height:1.8;color:var(--text-2);max-width:620px;margin:0; }
+    .pg-divider { width:52px;height:3px;margin-top:24px;background:linear-gradient(90deg,#2563EB,#38BDF8);border-radius:4px; }
+
+    /* Filter tabs */
+    .filter-bar { display:flex;flex-wrap:wrap;gap:10px;margin:48px 0 36px; }
+    .filter-btn { font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:8px 20px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text-2);cursor:pointer;transition:all .2s; }
+    .filter-btn.active,.filter-btn:hover { background:var(--accent);color:#fff;border-color:var(--accent); }
+
+    /* Project grid */
+    .proj-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px; }
+    .proj-card { background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s;display:flex;flex-direction:column; }
+    .proj-card:hover { border-color:var(--accent);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.13); }
+    .proj-thumb { width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:linear-gradient(135deg,var(--accent),var(--secondary));position:relative;overflow:hidden; }
+    .proj-thumb img { width:100%;height:100%;object-fit:cover;display:block; }
+    .proj-thumb-placeholder { width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:52px; }
+    .proj-body { padding:22px;display:flex;flex-direction:column;flex:1; }
+    .proj-category { font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px; }
+    .proj-title { font-size:17px;font-weight:700;margin:0 0 8px;line-height:1.3; }
+    .proj-desc { font-size:13px;line-height:1.7;color:var(--text-2);margin:0 0 16px;flex:1; }
+    .proj-tags { display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px; }
+    .proj-tag { font-size:11px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);color:var(--text-2); }
+    .proj-links { display:flex;gap:10px;flex-wrap:wrap; }
+    .proj-link { display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:7px 16px;border-radius:9px;text-decoration:none;transition:all .2s; }
+    .proj-link-primary { background:var(--accent);color:#fff; }
+    .proj-link-primary:hover { opacity:.85; }
+    .proj-link-outline { border:1px solid var(--border);color:var(--text); }
+    .proj-link-outline:hover { border-color:var(--accent);color:var(--accent); }
+    .proj-badge { position:absolute;top:12px;right:12px;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;background:rgba(0,0,0,.6);color:#fff;letter-spacing:.05em; }
+  </style>
+
+  <!-- Google Fonts — Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header d-flex justify-content-between">
+    <div class="header__navigation">
+      <nav id="menu" class="menu">
+        <ul class="menu__list d-flex justify-content-start">
+          <li class="menu__item"><a class="menu__link btn" href="../index.html"><span class="menu__caption">Home</span><i class="ph-bold ph-house-simple"></i></a></li>
+          <li class="menu__item menu__item--active"><a class="menu__link btn" href="portfolio.html"><span class="menu__caption">Portfolio</span><i class="ph-bold ph-squares-four"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="my_work.html"><span class="menu__caption">My Work</span><i class="ph-bold ph-briefcase"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="about.html"><span class="menu__caption">About Me</span><i class="ph-bold ph-user"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="resume.html"><span class="menu__caption">Resume</span><i class="ph-bold ph-article"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="contact.html"><span class="menu__caption">Contact</span><i class="ph-bold ph-envelope"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__controls d-flex justify-content-end">
+      <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+      <a class="header__trigger btn" href="mailto:akshata542003@gmail.com?subject=Message%20from%20your%20site"><span class="trigger__caption">Let's Talk</span><i class="ph-bold ph-chat-dots"></i></a>
+    </div>
+  </header>
+
+  <div class="pg-wrap">
+    <a class="back-link" href="../index.html"><i class="ph-bold ph-arrow-left"></i> Back to Home</a>
+
+    <!-- Hero -->
+    <div style="margin-bottom:0;">
+      <p class="pg-label">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="currentColor"><path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/></svg>
+        Portfolio
+      </p>
+      <h1 class="pg-title">Featured Projects &amp;<br>Case Studies</h1>
+      <p class="pg-subtitle">A collection of real-world applications, AI-powered tools, and web platforms I've built — from backend APIs to full-stack products.</p>
+      <div class="pg-divider"></div>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filter(this,'all')">All</button>
+      <button class="filter-btn" onclick="filter(this,'fullstack')">Full Stack</button>
+      <button class="filter-btn" onclick="filter(this,'ai')">AI / LLM</button>
+      <button class="filter-btn" onclick="filter(this,'django')">Django</button>
+      <button class="filter-btn" onclick="filter(this,'design')">UI Design</button>
+      <button class="filter-btn" onclick="filter(this,'research')">Research</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="proj-grid">
+
+      <!-- Deepfake Research Paper — Published -->
+      <div class="proj-card" data-cat="research ai" style="border-color:rgba(37,99,235,.35);">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,#1e3a8a,#1D4ED8);">
+          <div class="proj-thumb-placeholder">&#128737;</div>
+          <span class="proj-badge">&#128196; Published</span>
+        </div>
+        <div class="proj-body">
+          <p class="proj-category">Research · AI · Cybersecurity</p>
+          <h3 class="proj-title">Deepfake Technology in the Social Media Ecosystem</h3>
+          <p class="proj-desc">Published research on GAN-driven deepfake risks — covering misinformation, identity theft, and digital trust erosion. Includes CNN/RNN detection analysis and 4 real Indian case studies. Presented at National Students' Research &amp; Innovation Conference 2026 (ISBN: 978-81-995561-8-8).</p>
+          <div class="proj-tags">
+            <span class="proj-tag">GANs</span>
+            <span class="proj-tag">CNN / RNN</span>
+            <span class="proj-tag">Social Media</span>
+            <span class="proj-tag">Digital Trust</span>
+            <span class="proj-tag">Cybersecurity</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link proj-link-primary" href="https://www.linkedin.com/posts/akshata-jadhav-782679255_research-paper-certificate-activity-7436821556766613506-cCwh" target="_blank"><i class="ph-bold ph-certificate"></i> Certificate</a>
+            <a class="proj-link proj-link-outline" href="my_work.html"><i class="ph-bold ph-arrow-right"></i> Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DB Chatbot -->
+      <div class="proj-card" data-cat="ai fullstack">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,#1e3a8a,#2563EB);">
+          <div class="proj-thumb-placeholder">🤖</div>
+          <span class="proj-badge">AI + LLM</span>
+        </div>
+        <div class="proj-body">
+          <p class="proj-category">AI · Full Stack</p>
+          <h3 class="proj-title">DB Chatbot — NL to SQL</h3>
+          <p class="proj-desc">Converts plain English to MySQL queries using Groq Llama3. Features voice input, real-time dashboard, JWT auth, and one-click rollback for write operations.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">React</span>
+            <span class="proj-tag">FastAPI</span>
+            <span class="proj-tag">Groq AI</span>
+            <span class="proj-tag">MySQL</span>
+            <span class="proj-tag">JWT</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link proj-link-primary" href="https://github.com/akshatajadhav79/db-chatbot" target="_blank"><i class="ph-bold ph-github-logo"></i> GitHub</a>
+            <a class="proj-link proj-link-outline" href="my_work.html"><i class="ph-bold ph-arrow-right"></i> Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build Foridge -->
+      <div class="proj-card" data-cat="fullstack django">
+        <div class="proj-thumb">
+          <img src="../img/works/BF.png" alt="Build Foridge" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="proj-thumb-placeholder" style="display:none">🏠</div>
+          <span class="proj-badge">Live</span>
+        </div>
+        <div class="proj-body">
+          <p class="proj-category">Django · Full Stack</p>
+          <h3 class="proj-title">Build Foridge — Real Estate</h3>
+          <p class="proj-desc">99acres-inspired platform with property listings, advanced search, engineer portfolios, and client-builder communication modules.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Django</span>
+            <span class="proj-tag">MySQL</span>
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">Bootstrap</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link proj-link-primary" href="https://akshata05.pythonanywhere.com/" target="_blank"><i class="ph-bold ph-globe"></i> Live</a>
+            <a class="proj-link proj-link-outline" href="https://github.com/akshatajadhav79" target="_blank"><i class="ph-bold ph-github-logo"></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Swasti AI -->
+      <div class="proj-card" data-cat="ai fullstack">
+        <div class="proj-thumb">
+          <img src="../img/works/Swasti-AI.png" alt="Swasti AI" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="proj-thumb-placeholder" style="display:none">💊</div>
+          <span class="proj-badge">AI</span>
+        </div>
+        <div class="proj-body">
+          <p class="proj-category">AI · Healthcare</p>
+          <h3 class="proj-title">Swasti AI — Health Chatbot</h3>
+          <p class="proj-desc">AI-powered healthcare chatbot using FastAPI and React integrated with LLM models for intelligent, real-time health guidance with MongoDB storage.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">FastAPI</span>
+            <span class="proj-tag">LLM</span>
+            <span class="proj-tag">React</span>
+            <span class="proj-tag">MongoDB</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link proj-link-primary" href="https://github.com/akshatajadhav79" target="_blank"><i class="ph-bold ph-github-logo"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Library -->
+      <div class="proj-card" data-cat="fullstack django">
+        <div class="proj-thumb">
+          <img src="../img/works/li1.png" alt="Library" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="proj-thumb-placeholder" style="display:none">📚</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-category">Django · Web App</p>
+          <h3 class="proj-title">PCIMCA Library Management</h3>
+          <p class="proj-desc">Responsive library management system with admin dashboard, book tracking, user management, and lending record analytics.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Django</span>
+            <span class="proj-tag">MySQL</span>
+            <span class="proj-tag">Bootstrap</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link proj-link-primary" href="https://github.com/akshatajadhav79" target="_blank"><i class="ph-bold ph-github-logo"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard -->
+      <div class="proj-card" data-cat="design fullstack django">
+        <div class="proj-thumb">
+          <img src="../img/works/li3.png" alt="Dashboard" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="proj-thumb-placeholder" style="display:none">📊</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-category">UI Design · Django</p>
+          <h3 class="proj-title">Admin Dashboard Template</h3>
+          <p class="proj-desc">Clean, responsive dashboard template with sidebar navigation, dynamic charts, data tables, and dark/light mode styling.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Django</span>
+            <span class="proj-tag">UI Design</span>
+            <span class="proj-tag">Bootstrap</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link proj-link-primary" href="https://github.com/akshatajadhav79" target="_blank"><i class="ph-bold ph-github-logo"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wedding Planner -->
+      <div class="proj-card" data-cat="fullstack django">
+        <div class="proj-thumb">
+          <img src="../img/works/wp.png" alt="Wedding Planner" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="proj-thumb-placeholder" style="display:none">💍</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-category">Django · Web App</p>
+          <h3 class="proj-title">Wedding Planner</h3>
+          <p class="proj-desc">Event planning platform where users browse and book vendors — caterers, photographers — with secure profile management and booking history.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Django</span>
+            <span class="proj-tag">MySQL</span>
+            <span class="proj-tag">Python</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link proj-link-primary" href="https://github.com/akshatajadhav79" target="_blank"><i class="ph-bold ph-github-logo"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Facial Recognition -->
+      <div class="proj-card" data-cat="ai">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,#1e3a8a,#1D4ED8);">
+          <div class="proj-thumb-placeholder">👁️</div>
+          <span class="proj-badge">AI · CV</span>
+        </div>
+        <div class="proj-body">
+          <p class="proj-category">AI · Computer Vision</p>
+          <h3 class="proj-title">Facial Recognition Attendance</h3>
+          <p class="proj-desc">Automated attendance system using OpenCV and face_recognition. Detects, encodes, and compares facial features against a known database in real time.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">OpenCV</span>
+            <span class="proj-tag">NumPy</span>
+            <span class="proj-tag">Pandas</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link proj-link-primary" href="https://github.com/akshatajadhav79" target="_blank"><i class="ph-bold ph-github-logo"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo Design -->
+      <div class="proj-card" data-cat="design">
+        <div class="proj-thumb">
+          <img src="../img/works/LG.png" alt="GS Logo" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="proj-thumb-placeholder" style="display:none">⚙️</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-category">Brand Identity · Logo Design</p>
+          <h3 class="proj-title">GS Engineering — Logo</h3>
+          <p class="proj-desc">Strong professional brand identity for an engineering & trading company — reflecting precision, trust, and technical expertise.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Logo Design</span>
+            <span class="proj-tag">Branding</span>
+            <span class="proj-tag">Typography</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link proj-link-outline" href="my_work.html"><i class="ph-bold ph-arrow-right"></i> View More</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+
+    <!-- CTA -->
+    <div style="text-align:center;padding:72px 0 20px;">
+      <center>
+      <h2 style="font-size:clamp(22px,4vw,32px);font-weight:800;margin:0 0 14px;">Have a project idea?</h2></center>
+      <p style="color:var(--text-2);font-size:15px;max-width:440px;margin:0 auto 28px;line-height:1.75;">I'm open to freelance, collaboration, and full-time opportunities. Let's build something great.</p>
+      <a class="btn btn-default btn-hover btn-hover-accent" href="contact.html"><span class="btn-caption">Get in Touch</span><i class="ph-bold ph-envelope"></i></a>
+    </div>
+  </div>
+
+  <script src="../js/libs.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    function filter(btn, cat) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.proj-card').forEach(card => {
+        const cats = card.dataset.cat || '';
+        card.style.display = (cat === 'all' || cats.includes(cat)) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

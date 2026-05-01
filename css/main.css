@@ -44,8 +44,8 @@
 /* ------------------------------------------------*/
 /* Fonts Start */
 /* ------------------------------------------------*/
-/* Syne font */
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;display=swap");
+/* Plus Jakarta Sans font — Blue Theme */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400:wght@400..800&amp;display=swap");
 /* ------------------------------------------------*/
 /* Fonts End */
 /* ------------------------------------------------*/
@@ -64,8 +64,8 @@
 /* ------------------------------------------------*/
 :root {
   --_size: 1.6rem;
-  --_font-default: "Syne", sans-serif;
-  --_font-accent: "Syne", sans-serif;
+  --_font-default: "Plus Jakarta Sans", sans-serif;
+  --_font-accent: "Plus Jakarta Sans", sans-serif;
   --_radius-s: 1.5rem;
   --_radius-m: 2.2rem;
   --_radius-l: 3rem;
@@ -78,50 +78,50 @@
   --base--light: #e6ebf4;
   --base-tint--light: #ebf0f7;
   --base-shade--light: #bdc1c8;
-  --accent--light: #aa70e0;
-  --secondary--light: #7059e2;
-  --secondary-rgba--light: rgba(112,89,226,0.3);
+  --accent--light: #2563EB;
+  --secondary--light: #1D4ED8;
+  --secondary-rgba--light: rgba(37,99,235,0.25);
   --stroke-controls--light: #a8b0c1;
   --stroke-controls-neutral--light: rgba(0,0,0,0.3);
   --stroke-elements--light: #d1d5e0;
   --t-bright--light: #22232c;
   --t-medium--light: #424550;
   --t-muted--light: #666a79;
-  --t-accent--light: #8f56cc;
-  --t-secondary--light: #5d4ec4;
+  --t-accent--light: #2563EB;
+  --t-secondary--light: #1D4ED8;
   --t-disabled--light: #717586;
   --t-placeholder--light: #969bb2;
   --base-opp--light: #111111;
   --t-opp-bright--light: #ebf0f7;
   --t-opp-medium--light: #C7C6D3;
   --t-opp-muted--light: #A1A1AF;
-  --gradient-one--light: #CEC4EF;
-  --gradient-two--light: #f5c5cd;
-  --gradient-three--light: #ac8fe3;
+  --gradient-one--light: #BFDBFE;
+  --gradient-two--light: #BAE6FD;
+  --gradient-three--light: #3B82F6;
   /* dark color scheme */
   --base--dark: #111111;
   --base-tint--dark: #161616;
   --base-shade--dark: #000000;
-  --accent--dark: #E4B8BF;
-  --secondary--dark: #CEC4EF;
-  --secondary-rgba--dark: rgba(206,196,239,0.2);
+  --accent--dark: #38BDF8;
+  --secondary--dark: #93C5FD;
+  --secondary-rgba--dark: rgba(56,189,248,0.18);
   --stroke-controls--dark: #4B4B51;
   --stroke-controls-neutral--dark: rgba(255,255,255,0.3);
   --stroke-elements--dark: #303033;
   --t-bright--dark: #e9e9f1;
   --t-medium--dark: #C7C6D3;
   --t-muted--dark: #A1A1AF;
-  --t-accent--dark: #E1BAC5;
-  --t-secondary--dark: #CEC4EF;
+  --t-accent--dark: #38BDF8;
+  --t-secondary--dark: #93C5FD;
   --t-disabled--dark: #8B8A91;
   --t-placeholder--dark: #58585E;
   --base-opp--dark: #fafafa;
   --t-opp-bright--dark: #121319;
   --t-opp-medium--dark: #626577;
   --t-opp-muted--dark: #717586;
-  --gradient-one--dark: #a287d5;
-  --gradient-two--dark: #E4B8BF;
-  --gradient-three--dark: #8b6bc5;
+  --gradient-one--dark: #60A5FA;
+  --gradient-two--dark: #BAE6FD;
+  --gradient-three--dark: #2563EB;
   /* permanent colors */
   --per-base: #111111;
   --per-base-tint: #212121;
@@ -751,7 +751,7 @@ h2 {
 @media only screen and (min-width: 1200px) {
   h2 {
     font-size: 4.6rem;
-    max-width: 70rem;
+    /* max-width: 70rem; */
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -1217,7 +1217,7 @@ p.additional-text a {
 .btn-hover-accent::before {
   background: var(--accent);
   background: -moz-linear-gradient(315deg, var(--accent) 0%, var(--secondary) 100%);
-  background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+  background: linear-gradient(135deg, #1D4ED8 0%, #38BDF8 100%) !important;
 }
 .btn-hover-accent i, .btn-hover-accent span {
   text-shadow: 0 0 var(--t-opp-bright), 0 5rem var(--t-opp-bright);
@@ -2782,9 +2782,11 @@ form textarea:required:valid {
   height: 100%;
   background: var(--accent);
   background: -moz-linear-gradient(315deg, var(--accent) 0%, var(--secondary) 100%);
-  background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+  background: 
+  /* linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%); */
+  linear-gradient(135deg, #1D4ED8 0%, #38BDF8 100%) !important;
   -moz-border-radius: 2rem;
-       border-radius: 2rem;
+       border-radius: 2rem !important;;
   -webkit-transform: scale3d(1, 1, 1);
      -moz-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);

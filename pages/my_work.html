@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>My Work — Akshata Jadhav</title>
+  <meta name="description" content="Research papers, logo designs, and LLM projects by Akshata Jadhav.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/plugins.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+  <style>
+    /* ════════════════════════════════════════════════════
+       BLUE GRADIENT DESIGN SYSTEM — Akshata Jadhav
+       Font: Plus Jakarta Sans (Professional, Modern)
+       Palette: Deep Navy · Royal Blue · Sky Blue
+    ════════════════════════════════════════════════════ */
+
+    /* ── Universal font override ─────────────────────── */
+    *, body, h1,h2,h3,h4,h5,h6,p,span,a,li,button,input,textarea,select,
+    .menu__link,.btn,.btn-caption,.headline__title,.headline__subtitle,
+    .h2__title,.h2__subtitle,.h2__text,.h3__title,.about-descr__text,
+    .resume-lines__title,.resume-lines__source,.resume-lines__descr,.resume-lines__date,
+    .achievements__number,.achievements__descr,.tools-cards__caption,.teaser__text,
+    .contact-lines__title,.contact-lines__text,.logo__caption p,.avatar__block h6,
+    .gallery__descr h5,.small,.rounded-tag,.trigger__caption,.menu__caption,
+    .pg-title,.pg-subtitle,.pg-label,.back-link,.form-label,.sec-title,
+    .tl-title,.tl-org,.tl-desc,.tl-date,.sec-h h2,.tool-pill,
+    .proj-title,.proj-desc,.proj-category,.filter-btn,
+    .mw-section-title,.mw-section-desc,.research-title,.research-abstract,
+    .info-label,.info-value,.avail-text,.avail-sub,.social-link-label,.social-link-handle,
+    .stat-number,.stat-label,.skill-chip,.skill-group-label,
+    .interest-title,.interest-desc,.about-card-label,.about-card-value,
+    .cert-title,.cert-org,.cert-date,.cert-desc,.cert-name {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Page title gradient ─────────────────────────── */
+    .pg-title {
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    /* ── Main headline (index) ───────────────────────── */
+    .headline__title {
+      font-size: clamp(36px,5.5vw,68px) !important;
+      font-weight: 800 !important;
+      line-height: 1.06 !important;
+      letter-spacing: -0.025em !important;
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    /* ── Section headings ────────────────────────────── */
+    .h2__title, .mw-section-title, .sec-title {
+      font-weight: 800 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    /* ── Stat / achievement numbers ──────────────────── */
+    .stat-number, .achievements__number {
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      font-weight: 800 !important;
+    }
+
+    /* ── Dividers ─────────────────────────────────────── */
+    .pg-divider, .mw-divider {
+      background: linear-gradient(90deg, #2563EB, #38BDF8) !important;
+    }
+
+    /* ── Card hover glow ─────────────────────────────── */
+    .proj-card:hover, .info-card:hover, .interest-card:hover,
+    .stat-card:hover, .award-card:hover, .research-card:hover {
+      border-color: #2563EB !important;
+      box-shadow: 0 16px 48px rgba(37,99,235,.2) !important;
+    }
+
+    /* ── Filter active ───────────────────────────────── */
+    .filter-btn.active, .filter-btn:hover {
+      background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important;
+      border-color: transparent !important;
+    }
+
+    /* ── Form focus ──────────────────────────────────── */
+    .form-input:focus, .form-textarea:focus {
+      border-color: #2563EB !important;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.15) !important;
+    }
+
+    /* ── Download bar ────────────────────────────────── */
+    .dl-bar { background: linear-gradient(135deg, #1D4ED8 0%, #38BDF8 100%) !important; }
+    .dl-btn { color: #1D4ED8 !important; }
+
+    /* ── Social hover ────────────────────────────────── */
+    .social-link:hover { border-color: #2563EB !important; }
+
+    /* ── Availability dot pulse ──────────────────────── */
+    .avail-dot { background: #38BDF8 !important; }
+    @keyframes pulse-blue {
+      0%,100%{box-shadow:0 0 0 0 rgba(56,189,248,.5)}
+      50%{box-shadow:0 0 0 7px rgba(56,189,248,0)}
+    }
+    .avail-dot { animation: pulse-blue 2s infinite !important; }
+
+    /* ── Icon backgrounds ────────────────────────────── */
+    .research-icon, .cert-icon {
+      background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important;
+    }
+
+    /* ── Skill chip dot ──────────────────────────────── */
+    .skill-chip-dot { background: #38BDF8 !important; }
+    .skill-chip:hover { border-color: #2563EB !important; color: #2563EB !important; }
+    .tool-pill:hover { border-color: #2563EB !important; color: #2563EB !important; }
+
+    /* ── Tl score pill ───────────────────────────────── */
+    .tl-score { background: rgba(37,99,235,.14) !important; color: #60A5FA !important; }
+
+    /* ── Submit button ───────────────────────────────── */
+    .submit-btn { background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important; }
+
+    /* ── Success message ─────────────────────────────── */
+    .success-msg { background:#eff6ff !important; border-color:#bfdbfe !important; }
+    .success-msg p { color: #1D4ED8 !important; }
+
+    /* ── Proj thumb placeholder gradients ────────────── */
+    .proj-thumb { background: linear-gradient(135deg,#1e3a8a,#2563EB) !important; }
+
+    /* ── Page shell ─────────────────────────────────── */
+    .mw-page { max-width: 960px; margin: 0 auto; padding: 60px 24px 100px; }
+
+    /* ── Back link ──────────────────────────────────── */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; letter-spacing: .04em;
+      text-transform: uppercase; color: var(--accent);
+      text-decoration: none; margin-bottom: 56px;
+      transition: gap .2s;
+    }
+    .back-link:hover { gap: 14px; }
+
+    /* ── Section header ─────────────────────────────── */
+    .mw-section { margin-bottom: 72px; }
+    .mw-section-label {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 12px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+    }
+    .mw-section-label svg { flex-shrink: 0; }
+    .mw-section-title {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800; line-height: 1.15;
+      margin: 0 0 14px;
+    }
+    .mw-section-desc {
+      font-size: 15px; line-height: 1.75;
+      color: var(--text-2); max-width: 640px; margin: 0 0 40px;
+    }
+    .mw-divider {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--secondary));
+      border-radius: 4px; margin-bottom: 48px;
+    }
+
+    /* ── Research cards ─────────────────────────────── */
+    .research-grid { display: flex; flex-direction: column; gap: 24px; }
+    .research-card {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+    }
+    .research-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,.12);
+    }
+    .research-icon {
+      width: 56px; height: 56px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--secondary));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; flex-shrink: 0;
+    }
+    .research-body {}
+    .research-meta {
+      display: flex; align-items: center; gap: 10px;
+      flex-wrap: wrap; margin-bottom: 8px;
+    }
+    .research-year {
+      font-size: 11px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      padding: 3px 10px; border-radius: 20px;
+    }
+    .research-status {
+      font-size: 11px; font-weight: 600; padding: 3px 10px;
+      border-radius: 20px; letter-spacing: .06em;
+    }
+    .status-published { background: #eff6ff; color: #1D4ED8; }
+    .status-progress  { background: #fef7e0; color: #b45309; }
+    .status-review    { background: #e8f0fe; color: #2563EB; }
+    .research-title {
+      font-size: 17px; font-weight: 700; line-height: 1.4;
+      margin: 0 0 8px;
+    }
+    .research-desc {
+      font-size: 14px; line-height: 1.7;
+      color: var(--text-2); margin: 0 0 16px;
+    }
+    .research-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .rtag {
+      font-size: 11px; font-weight: 600; letter-spacing: .04em;
+      padding: 4px 12px; border-radius: 20px;
+      border: 1px solid var(--border); color: var(--text-2);
+      background: transparent;
+    }
+    .research-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 700; color: var(--accent);
+      text-decoration: none; letter-spacing: .02em;
+      transition: gap .2s;
+    }
+    .research-link:hover { gap: 10px; }
+
+    /* ── Logo grid ──────────────────────────────────── */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .logo-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+    }
+    .logo-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,.14);
+    }
+    .logo-preview {
+      width: 100%; aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 64px; position: relative; overflow: hidden;
+    }
+    .logo-preview-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+      opacity: .08;
+    }
+    .logo-preview-emoji { position: relative; z-index: 1; }
+    .logo-info { padding: 20px; }
+    .logo-client {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .08em; color: var(--accent); margin-bottom: 6px;
+    }
+    .logo-title { font-size: 16px; font-weight: 700; margin: 0 0 8px; }
+    .logo-desc { font-size: 13px; line-height: 1.65; color: var(--text-2); margin: 0 0 14px; }
+    .logo-tools { display: flex; flex-wrap: wrap; gap: 6px; }
+    .logo-tool {
+      font-size: 11px; padding: 3px 10px; border-radius: 20px;
+      border: 1px solid var(--border); color: var(--text-2);
+    }
+
+    /* ── LLM project cards ──────────────────────────── */
+    .llm-grid { display: flex; flex-direction: column; gap: 28px; }
+    .llm-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      position: relative; overflow: hidden;
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+    }
+    .llm-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(180deg, var(--accent), var(--secondary));
+      border-radius: 0;
+    }
+    .llm-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,.12);
+    }
+    .llm-top {
+      display: flex; align-items: flex-start;
+      justify-content: space-between; gap: 16px;
+      margin-bottom: 14px; flex-wrap: wrap;
+    }
+    .llm-number {
+      font-size: 11px; font-weight: 800; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+    }
+    .llm-title { font-size: 20px; font-weight: 800; margin: 0; line-height: 1.3; }
+    .llm-badge {
+      font-size: 11px; font-weight: 700; padding: 5px 14px;
+      border-radius: 20px; white-space: nowrap; flex-shrink: 0;
+    }
+    .badge-ai  { background: #e8f0fe; color: #2563EB; }
+    .badge-rag { background: #fce8e6; color: #c0392b; }
+    .badge-nlp { background: #eff6ff; color: #1D4ED8; }
+    .badge-agent { background: #fef7e0; color: #b45309; }
+    .llm-desc {
+      font-size: 14px; line-height: 1.75;
+      color: var(--text-2); margin: 0 0 20px;
+    }
+    .llm-stack {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px; margin-bottom: 20px;
+    }
+    .llm-stack-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--text-2);
+    }
+    .llm-stack-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0;
+    }
+    .llm-stack-label { font-weight: 600; color: var(--text); }
+    .llm-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .llm-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 13px; font-weight: 700; padding: 9px 20px;
+      border-radius: 10px; text-decoration: none;
+      transition: all .2s; letter-spacing: .02em;
+    }
+    .llm-btn-primary {
+      background: var(--accent); color: #fff;
+    }
+    .llm-btn-primary:hover { opacity: .85; transform: translateY(-1px); }
+    .llm-btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text); background: transparent;
+    }
+    .llm-btn-outline:hover {
+      border-color: var(--accent); color: var(--accent);
+    }
+
+    /* ── Star icon helper ───────────────────────────── */
+    .star-svg { display: inline-block; vertical-align: middle; }
+
+    /* ── Responsive ─────────────────────────────────── */
+    @media (max-width: 600px) {
+      .research-card { grid-template-columns: 1fr; }
+      .research-icon { display: none; }
+      .llm-card { padding: 22px 20px 22px 26px; }
+    }
+  </style>
+
+  <!-- Google Fonts — Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header Start -->
+  <header id="header" class="header d-flex justify-content-between">
+    <div class="header__navigation">
+      <nav id="menu" class="menu">
+        <ul class="menu__list d-flex justify-content-start">
+          <li class="menu__item">
+            <a class="menu__link btn" href="../index.html">
+              <span class="menu__caption">Home</span>
+              <i class="ph-bold ph-house-simple"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="portfolio.html">
+              <span class="menu__caption">Portfolio</span>
+              <i class="ph-bold ph-squares-four"></i>
+            </a>
+          </li>
+          <li class="menu__item menu__item--active">
+            <a class="menu__link btn" href="my_work.html">
+              <span class="menu__caption">My Work</span>
+              <i class="ph-bold ph-briefcase"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="about.html">
+              <span class="menu__caption">About Me</span>
+              <i class="ph-bold ph-user"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="resume.html">
+              <span class="menu__caption">Resume</span>
+              <i class="ph-bold ph-article"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="contact.html">
+              <span class="menu__caption">Contact</span>
+              <i class="ph-bold ph-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__controls d-flex justify-content-end">
+      <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+      <a class="header__trigger btn" href="mailto:akshata542003@gmail.com?subject=Message%20from%20your%20site">
+        <span class="trigger__caption">Let's Talk</span>
+        <i class="ph-bold ph-chat-dots"></i>
+      </a>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <div class="mw-page">
+
+    <!-- Back -->
+    <a class="back-link" href="../index.html">
+      <i class="ph-bold ph-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Page Hero -->
+    <div class="mw-section" style="margin-bottom:80px;">
+      <p class="mw-section-label">
+        <svg class="star-svg" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="currentColor">
+          <path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
+        </svg>
+        My Work
+      </p>
+      <h1 class="mw-section-title">Research, Design &<br>AI Projects</h1>
+      <p class="mw-section-desc">A curated showcase of my academic research, brand identity designs, and hands-on LLM / AI engineering projects — reflecting my journey across technology, creativity, and innovation.</p>
+      <div class="mw-divider"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 1 — RESEARCH PAPERS
+    ════════════════════════════════════════════════ -->
+    <div class="mw-section">
+      <p class="mw-section-label">
+        <svg class="star-svg" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="currentColor">
+          <path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
+        </svg>
+        Research Papers
+      </p>
+      <h2 class="mw-section-title" style="font-size:clamp(22px,3vw,30px);">Academic Research &amp; Publications</h2>
+      <p class="mw-section-desc">Exploring cutting-edge topics at the intersection of AI, web technologies, and data science.</p>
+
+      <div class="research-grid">
+
+        <!-- Paper 0 — Deepfake (Published, Conference) -->
+        <div class="research-card" style="border-color:rgba(37,99,235,.35);box-shadow:0 4px 24px rgba(37,99,235,.1);">
+          <div class="research-icon">🛡️</div>
+          <div class="research-body">
+            <div class="research-meta">
+              <span class="research-year">2026</span>
+              <span class="research-status status-published">✅ Published</span>
+            </div>
+            <h3 class="research-title">Deepfake Technology in the Social Media Ecosystem: A Comprehensive Risk Assessment and Its Implications for Youth Susceptibility and Digital Trust</h3>
+            <p class="research-desc">Published at the <strong>National Students' Research &amp; Innovation Conference 2025–26</strong> (ISBN: 978-81-995561-8-8, Feb 13, 2026 · Pune). Examines GAN-driven deepfake creation, social media misinformation amplification, identity theft, financial fraud, and political manipulation. Reviews CNN/RNN/LSTM-based detection frameworks and proposes multidisciplinary mitigation strategies encompassing digital literacy, legal governance, and real-time detection systems. Includes four real-world Indian case studies analysed by the Deepfakes Analysis Unit (DAU).</p>
+            <div class="research-tags">
+              <span class="rtag">Deepfakes</span>
+              <span class="rtag">GANs</span>
+              <span class="rtag">Social Media</span>
+              <span class="rtag">CNN / RNN</span>
+              <span class="rtag">Digital Trust</span>
+              <span class="rtag">Misinformation</span>
+              <span class="rtag">Cybersecurity</span>
+            </div>
+            <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+             
+              <a class="research-link" href="https://www.linkedin.com/posts/akshata-jadhav-782679255_research-paper-certificate-activity-7436821556766613506-cCwh" target="_blank">
+                Certificate <i class="ph-bold ph-arrow-right"></i>
+              </a>
+
+              <a class="research-link" href="../files/Deepfake_Technology_in_the_Social_Media_Ecosystem.pdf" target="_blank" style="margin-left:4px;">
+                <i class="ph-bold ph-file-pdf"></i> View Paper (PDF)
+              </a>
+
+              <span style="font-size:12px;color:var(--text-2);">· Co-authored with Mr. Shubham R. Jambhale, PCIMCA Pune</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div><!-- /research section -->
+
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 2 — LOGO DESIGN
+    ════════════════════════════════════════════════ -->
+    <div class="mw-section">
+      <p class="mw-section-label">
+        <svg class="star-svg" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="currentColor">
+          <path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
+        </svg>
+        Logo Design
+      </p>
+      <h2 class="mw-section-title" style="font-size:clamp(22px,3vw,30px);">Brand Identity &amp; Visual Design</h2>
+      <p class="mw-section-desc">Crafting strong, memorable brand identities that communicate trust, professionalism, and purpose.</p>
+
+      <div class="logo-grid">
+
+        <!-- Logo 1 -->
+        <div class="logo-card">
+          <div class="logo-preview" style="background: linear-gradient(135deg,#000000,#000000);">
+            <div class="logo-preview-bg"></div>
+            <img src="../img/works/LG.png" alt="GS Engineering and Trading Logo"
+                style="max-width:100%; max-height:100%; object-fit:contain; position:relative; z-index:1;">
+          </div>
+          <div class="logo-info">
+            <p class="logo-client">Engineering & Trading</p>
+            <h3 class="logo-title">GS Engineering and Trading</h3>
+            <p class="logo-desc">A strong, industry-focused brand identity reflecting precision, trust, and technical expertise for an engineering solutions company.</p>
+            <div class="logo-tools">
+              <span class="logo-tool">Brand Identity</span>
+              <span class="logo-tool">Vector Design</span>
+              <span class="logo-tool">Typography</span>
+            </div>
+          </div>
+        </div>
+
+       
+
+      </div>
+    </div><!-- /logo section -->
+
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 3 — LLM PROJECTS
+    ════════════════════════════════════════════════ -->
+    <div class="mw-section">
+      <p class="mw-section-label">
+        <svg class="star-svg" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="currentColor">
+          <path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
+        </svg>
+        LLM Projects
+      </p>
+      <h2 class="mw-section-title" style="font-size:clamp(22px,3vw,30px);">AI &amp; Large Language Model Engineering</h2>
+      <p class="mw-section-desc">Building intelligent, production-ready applications powered by state-of-the-art language models and modern AI infrastructure.</p>
+
+      <div class="llm-grid">
+
+        <!-- LLM Project 1 -->
+        <div class="llm-card">
+          <div class="llm-top">
+            <div>
+              <p class="llm-number">Project 01</p>
+              <h3 class="llm-title">DB Chatbot — Natural Language to SQL</h3>
+            </div>
+            <span class="llm-badge badge-nlp">MongoDB</span>
+          </div>
+          <p class="llm-desc">
+            An AI-powered full-stack chatbot that converts plain English questions into executable MySQL queries. Features include voice-to-SQL input, real-time dashboard with live DB stats, JWT authentication, Undo/Rollback for write operations, and SQL caching for performance. The LLM backend uses Groq (Llama3-8b) via a FastAPI service with a React frontend.
+          </p>
+          <div class="llm-stack">
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">LLM:</span> Groq Llama3-8b</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Backend:</span> FastAPI + Python</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Frontend:</span> React + Vite</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Database:</span> MySQL + SQLAlchemy</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Auth:</span> JWT + bcrypt</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Voice:</span> Web Speech API</span>
+            </div>
+          </div>
+          <div class="llm-links">
+            <a class="llm-btn llm-btn-primary" href="https://github.com/akshatajadhav79/db-chatbot" target="_blank">
+              <i class="ph-bold ph-github-logo"></i> GitHub
+            </a>
+            <a class="llm-btn llm-btn-outline" href="../index.html#contact">
+              <i class="ph-bold ph-chat-dots"></i> Discuss
+            </a>
+          </div>
+        </div>
+
+        <!-- LLM Project 2 -->
+        <div class="llm-card">
+          <div class="llm-top">
+            <div>
+              <p class="llm-number">Project 02</p>
+              <h3 class="llm-title">Swasti AI — Health Chatbot</h3>
+            </div>
+            <span class="llm-badge badge-rag">RAG</span>
+          </div>
+          <p class="llm-desc">
+            An AI-powered healthcare chatbot built with FastAPI and React, integrated with LLM models to provide intelligent, real-time health guidance. Uses MongoDB for conversation history, LangChain for RAG-based document retrieval from medical knowledge bases, and a clean React chat interface with streaming responses.
+          </p>
+          <div class="llm-stack">
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">LLM:</span> OpenAI / LangChain</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">RAG:</span> LangChain + Vector DB</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Backend:</span> FastAPI</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Frontend:</span> React</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Database:</span> MongoDB</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Domain:</span> Healthcare AI</span>
+            </div>
+          </div>
+          <div class="llm-links">
+            <a class="llm-btn llm-btn-primary" href="https://github.com/akshatajadhav79/Swasti-AI" target="_blank">
+              <i class="ph-bold ph-github-logo"></i> GitHub
+            </a>
+            <a class="llm-btn llm-btn-outline" href="../index.html#contact">
+              <i class="ph-bold ph-chat-dots"></i> Discuss
+            </a>
+          </div>
+        </div>
+
+        <!-- LLM Project 3 -->
+        <div class="llm-card">
+          <div class="llm-top">
+            <div>
+              <p class="llm-number">Project 03</p>
+              <h3 class="llm-title">AI Resume Analyzer &amp; Job Matcher</h3>
+            </div>
+            <span class="llm-badge badge-ai">LLM + AI</span>
+          </div>
+          <p class="llm-desc">
+            A tool that parses uploaded PDF resumes using PyPDF, extracts key skills and experience, then uses an LLM to compare against a job description and provide a match score, gap analysis, and rewrite suggestions. Built with FastAPI backend, React frontend, and Groq API for NLP processing.
+          </p>
+          <div class="llm-stack">
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">LLM:</span> Groq API (Llama3)</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Parsing:</span> PyPDF + LangChain</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Backend:</span> FastAPI</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Frontend:</span> React</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Feature:</span> Gap Analysis</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Status:</span> In Progress</span>
+            </div>
+          </div>
+          <div class="llm-links">
+            <a class="llm-btn llm-btn-primary" href="https://github.com/akshatajadhav79" target="_blank">
+              <i class="ph-bold ph-github-logo"></i> GitHub
+            </a>
+            <a class="llm-btn llm-btn-outline" href="../index.html#contact">
+              <i class="ph-bold ph-chat-dots"></i> Discuss
+            </a>
+          </div>
+        </div>
+
+        <!-- LLM Project 4 -->
+        <div class="llm-card">
+          <div class="llm-top">
+            <div>
+              <p class="llm-number">Project 04</p>
+              <h3 class="llm-title">Ollama Local LLM Experiments</h3>
+            </div>
+            <span class="llm-badge badge-agent">Local AI</span>
+          </div>
+          <p class="llm-desc">
+            Exploration of running open-source LLMs locally using Ollama — including Mistral, Llama2, and CodeLlama. Built custom Python wrappers and FastAPI endpoints to serve local models, tested against cloud APIs for speed and accuracy tradeoffs, and documented findings for privacy-focused deployment scenarios.
+          </p>
+          <div class="llm-stack">
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Runtime:</span> Ollama</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Models:</span> Llama2, Mistral, CodeLlama</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Framework:</span> LangChain</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">API:</span> FastAPI</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Focus:</span> Privacy / On-Premise</span>
+            </div>
+            <div class="llm-stack-item">
+              <span class="llm-stack-dot"></span>
+              <span><span class="llm-stack-label">Language:</span> Python</span>
+            </div>
+          </div>
+          <div class="llm-links">
+            <a class="llm-btn llm-btn-primary" href="https://github.com/akshatajadhav79" target="_blank">
+              <i class="ph-bold ph-github-logo"></i> GitHub
+            </a>
+            <a class="llm-btn llm-btn-outline" href="../index.html#contact">
+              <i class="ph-bold ph-chat-dots"></i> Discuss
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /llm section -->
+
+    <!-- CTA -->
+    <div style="text-align:center; padding: 60px 0 20px;">
+      <p class="mw-section-label" style="justify-content:center;">
+        <svg class="star-svg" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="currentColor">
+          <path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
+        </svg>
+        Let's Collaborate
+      </p>
+      <center>
+      <h2 style="font-size:clamp(24px,4vw,36px); font-weight:800; margin:0 0 16px;">Have a project in mind?</h2></center>
+      <p style="color:var(--text-2); font-size:15px; max-width:480px; margin:0 auto 32px; line-height:1.7;">
+        Whether it's AI integration, full-stack development, brand design, or research collaboration — I'd love to hear from you.
+      </p>
+      <a class="btn btn-default btn-hover btn-hover-accent" href="../index.html#contact">
+        <span class="btn-caption">Get in Touch</span>
+        <i class="ph-bold ph-envelope"></i>
+      </a>
+    </div>
+
+  </div><!-- /mw-page -->
+
+  <script src="../js/libs.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

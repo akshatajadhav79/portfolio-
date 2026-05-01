@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume — Akshata Jadhav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/plugins.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <style>
+    /* ════════════════════════════════════════════════════
+       BLUE GRADIENT DESIGN SYSTEM — Akshata Jadhav
+       Font: Plus Jakarta Sans (Professional, Modern)
+       Palette: Deep Navy · Royal Blue · Sky Blue
+    ════════════════════════════════════════════════════ */
+
+    /* ── Universal font override ─────────────────────── */
+    *, body, h1,h2,h3,h4,h5,h6,p,span,a,li,button,input,textarea,select,
+    .menu__link,.btn,.btn-caption,.headline__title,.headline__subtitle,
+    .h2__title,.h2__subtitle,.h2__text,.h3__title,.about-descr__text,
+    .resume-lines__title,.resume-lines__source,.resume-lines__descr,.resume-lines__date,
+    .achievements__number,.achievements__descr,.tools-cards__caption,.teaser__text,
+    .contact-lines__title,.contact-lines__text,.logo__caption p,.avatar__block h6,
+    .gallery__descr h5,.small,.rounded-tag,.trigger__caption,.menu__caption,
+    .pg-title,.pg-subtitle,.pg-label,.back-link,.form-label,.sec-title,
+    .tl-title,.tl-org,.tl-desc,.tl-date,.sec-h h2,.tool-pill,
+    .proj-title,.proj-desc,.proj-category,.filter-btn,
+    .mw-section-title,.mw-section-desc,.research-title,.research-abstract,
+    .info-label,.info-value,.avail-text,.avail-sub,.social-link-label,.social-link-handle,
+    .stat-number,.stat-label,.skill-chip,.skill-group-label,
+    .interest-title,.interest-desc,.about-card-label,.about-card-value,
+    .cert-title,.cert-org,.cert-date,.cert-desc,.cert-name {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Page title gradient ─────────────────────────── */
+    .pg-title {
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    /* ── Main headline (index) ───────────────────────── */
+    .headline__title {
+      font-size: clamp(36px,5.5vw,68px) !important;
+      font-weight: 800 !important;
+      line-height: 1.06 !important;
+      letter-spacing: -0.025em !important;
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    /* ── Section headings ────────────────────────────── */
+    .h2__title, .mw-section-title, .sec-title {
+      font-weight: 800 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    /* ── Stat / achievement numbers ──────────────────── */
+    .stat-number, .achievements__number {
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      font-weight: 800 !important;
+    }
+
+    /* ── Dividers ─────────────────────────────────────── */
+    .pg-divider, .mw-divider {
+      background: linear-gradient(90deg, #2563EB, #38BDF8) !important;
+    }
+
+    /* ── Card hover glow ─────────────────────────────── */
+    .proj-card:hover, .info-card:hover, .interest-card:hover,
+    .stat-card:hover, .award-card:hover, .research-card:hover {
+      border-color: #2563EB !important;
+      box-shadow: 0 16px 48px rgba(37,99,235,.2) !important;
+    }
+
+    /* ── Filter active ───────────────────────────────── */
+    .filter-btn.active, .filter-btn:hover {
+      background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important;
+      border-color: transparent !important;
+    }
+
+    /* ── Form focus ──────────────────────────────────── */
+    .form-input:focus, .form-textarea:focus {
+      border-color: #2563EB !important;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.15) !important;
+    }
+
+    /* ── Download bar ────────────────────────────────── */
+    .dl-bar { background: linear-gradient(135deg, #1D4ED8 0%, #38BDF8 100%) !important; }
+    .dl-btn { color: #1D4ED8 !important; }
+
+    /* ── Social hover ────────────────────────────────── */
+    .social-link:hover { border-color: #2563EB !important; }
+
+    /* ── Availability dot pulse ──────────────────────── */
+    .avail-dot { background: #38BDF8 !important; }
+    @keyframes pulse-blue {
+      0%,100%{box-shadow:0 0 0 0 rgba(56,189,248,.5)}
+      50%{box-shadow:0 0 0 7px rgba(56,189,248,0)}
+    }
+    .avail-dot { animation: pulse-blue 2s infinite !important; }
+
+    /* ── Icon backgrounds ────────────────────────────── */
+    .research-icon, .cert-icon {
+      background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important;
+    }
+
+    /* ── Skill chip dot ──────────────────────────────── */
+    .skill-chip-dot { background: #38BDF8 !important; }
+    .skill-chip:hover { border-color: #2563EB !important; color: #2563EB !important; }
+    .tool-pill:hover { border-color: #2563EB !important; color: #2563EB !important; }
+
+    /* ── Tl score pill ───────────────────────────────── */
+    .tl-score { background: rgba(37,99,235,.14) !important; color: #60A5FA !important; }
+
+    /* ── Submit button ───────────────────────────────── */
+    .submit-btn { background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important; }
+
+    /* ── Success message ─────────────────────────────── */
+    .success-msg { background:#eff6ff !important; border-color:#bfdbfe !important; }
+    .success-msg p { color: #1D4ED8 !important; }
+
+    /* ── Proj thumb placeholder gradients ────────────── */
+    .proj-thumb { background: linear-gradient(135deg,#1e3a8a,#2563EB) !important; }
+
+    .pg-wrap { max-width: 980px; margin: 0 auto; padding: 56px 28px 100px; }
+    .back-link { display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-bottom:52px;transition:gap .2s; }
+    .back-link:hover { gap:14px; }
+    .pg-label { display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px; }
+    .pg-title { font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.12;margin:0 0 14px; }
+    .pg-divider { width:52px;height:3px;margin-top:24px;margin-bottom:56px;background:linear-gradient(90deg,#2563EB,#38BDF8);border-radius:4px; }
+    .sec-block { margin-bottom:64px; }
+    .sec-h { display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;padding-bottom:12px;border-bottom:2px solid var(--border); }
+    .sec-h h2 { font-size:20px;font-weight:800;margin:0; }
+    .sec-h-icon { font-size:22px; }
+
+    /* Timeline */
+    .timeline { display:flex;flex-direction:column;gap:0; }
+    .tl-item { display:grid;grid-template-columns:180px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--border);position:relative; }
+    .tl-item:last-child { border-bottom:none; }
+    @media(max-width:600px){ .tl-item { grid-template-columns:1fr; gap:8px; } }
+    .tl-date { font-size:13px;font-weight:600;color:var(--accent);padding-top:4px;flex-shrink:0; }
+    .tl-body {}
+    .tl-title { font-size:17px;font-weight:700;margin:0 0 4px; }
+    .tl-org { font-size:14px;color:var(--accent);font-weight:600;margin:0 0 10px; }
+    .tl-org a { color:var(--accent);text-decoration:none; }
+    .tl-desc { font-size:14px;line-height:1.75;color:var(--text-2);margin:0 0 12px; }
+    .tl-tags { display:flex;flex-wrap:wrap;gap:6px; }
+    .tl-tag { font-size:11px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);color:var(--text-2); }
+    .tl-score { display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;padding:4px 14px;border-radius:20px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);margin-bottom:10px; }
+
+    /* Tools grid */
+    .tools-pg { display:flex;flex-wrap:wrap;gap:12px; }
+    .tool-pill { display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:25px;border:1px solid var(--border);background:var(--card);font-size:13px;font-weight:600;transition:all .2s; }
+    .tool-pill:hover { border-color:var(--accent);color:var(--accent); }
+    .tool-pill img { width:22px;height:22px;object-fit:contain; }
+
+    /* Award */
+    .award-card { background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 28px;display:flex;align-items:flex-start;gap:20px;transition:border-color .25s,transform .25s; }
+    .award-card:hover { border-color:var(--accent);transform:translateY(-2px); }
+    .award-icon { font-size:36px;flex-shrink:0; }
+    .award-title { font-size:16px;font-weight:700;margin:0 0 6px; }
+    .award-desc { font-size:14px;color:var(--text-2);line-height:1.65;margin:0; }
+
+    /* Download bar */
+    .dl-bar { background:linear-gradient(135deg,var(--accent),var(--secondary));border-radius:16px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:64px; }
+    .dl-bar h3 { color:#fff;font-size:20px;font-weight:700;margin:0 0 4px; }
+    .dl-bar p { color:rgba(255,255,255,.8);font-size:14px;margin:0; }
+    .dl-btn { display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--accent);font-size:14px;font-weight:700;padding:12px 24px;border-radius:10px;text-decoration:none;transition:transform .2s; }
+    .dl-btn:hover { transform:scale(1.04); }
+
+        .cert-grid { display:flex;flex-direction:column;gap:16px; }
+        .cert-card { background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 28px;display:flex;align-items:flex-start;gap:20px;transition:border-color .25s,transform .25s; }
+        .cert-card:hover { border-color:#2563EB;transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,99,235,.15); }
+        .cert-icon { width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#1D4ED8,#38BDF8);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0; }
+        .cert-meta { flex:1; }
+        .cert-name { font-size:16px;font-weight:700;margin:0 0 4px;color:var(--text); }
+        .cert-org { font-size:13px;font-weight:600;color:#38BDF8;margin:0 0 8px; }
+        .cert-desc { font-size:13px;line-height:1.7;color:var(--text-2);margin:0 0 10px; }
+        .cert-footer { display:flex;align-items:center;gap:12px;flex-wrap:wrap; }
+        .cert-date-badge { display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 12px;border-radius:20px;background:rgba(37,99,235,.13);color:#60A5FA; }
+        .cert-link { display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:.02em;transition:gap .2s; }
+        .cert-link:hover { gap:9px; }
+      
+  </style>
+
+  <!-- Google Fonts — Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header d-flex justify-content-between">
+    <div class="header__navigation">
+      <nav id="menu" class="menu">
+        <ul class="menu__list d-flex justify-content-start">
+          <li class="menu__item"><a class="menu__link btn" href="../index.html"><span class="menu__caption">Home</span><i class="ph-bold ph-house-simple"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="portfolio.html"><span class="menu__caption">Portfolio</span><i class="ph-bold ph-squares-four"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="my_work.html"><span class="menu__caption">My Work</span><i class="ph-bold ph-briefcase"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="about.html"><span class="menu__caption">About Me</span><i class="ph-bold ph-user"></i></a></li>
+          <li class="menu__item menu__item--active"><a class="menu__link btn" href="resume.html"><span class="menu__caption">Resume</span><i class="ph-bold ph-article"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="contact.html"><span class="menu__caption">Contact</span><i class="ph-bold ph-envelope"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__controls d-flex justify-content-end">
+      <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+      <a class="header__trigger btn" href="mailto:akshata542003@gmail.com?subject=Message%20from%20your%20site"><span class="trigger__caption">Let's Talk</span><i class="ph-bold ph-chat-dots"></i></a>
+    </div>
+  </header>
+
+  <div class="pg-wrap">
+    <a class="back-link" href="../index.html"><i class="ph-bold ph-arrow-left"></i> Back to Home</a>
+
+    <p class="pg-label">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="currentColor"><path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/></svg>
+      Resume
+    </p>
+    <h1 class="pg-title">Education &amp; Professional<br>Experience</h1>
+    <div class="pg-divider"></div>
+
+    <!-- Download bar -->
+    <div class="dl-bar">
+      <div>
+        <h3>Akshata Jadhav — CV</h3>
+        <p>Python Developer · Full Stack Engineer · AI Enthusiast</p>
+      </div>
+      <a class="dl-btn" href="../img/Akshata_Jadhav_Resume.pdf" download><i class="ph-bold ph-download-simple"></i> Download PDF</a>
+    </div>
+
+    <!-- Experience -->
+    <div class="sec-block">
+      <div class="sec-h">
+        <h2>Work Experience</h2>
+        <span class="sec-h-icon">💼</span>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">Aug 2023 – Sep 2024</div>
+          <div class="tl-body">
+            <h3 class="tl-title">Full Stack Web Developer</h3>
+            <p class="tl-org"><a href="#" target="_blank">ONE IT Solutions Private Limited</a></p>
+            <p class="tl-desc">Developed and maintained scalable web applications using Django, Django REST Framework, and FastAPI. Designed RESTful APIs, authentication systems (JWT, OAuth), and role-based access controls. Collaborated with cross-functional teams across the full SDLC. Managed relational and non-relational databases including MySQL, SQLite, and MongoDB ensuring data integrity and optimized query performance.</p>
+            <div class="tl-tags">
+              <span class="tl-tag">Python</span><span class="tl-tag">Django</span><span class="tl-tag">FastAPI</span><span class="tl-tag">MySQL</span><span class="tl-tag">MongoDB</span><span class="tl-tag">JWT</span><span class="tl-tag">REST API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="sec-block">
+      <div class="sec-h">
+        <h2>Education</h2>
+        <span class="sec-h-icon">🎓</span>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">Aug 2024 – Jul 2026</div>
+          <div class="tl-body">
+            <h3 class="tl-title">Master of Computer Application (MCA)</h3>
+            <p class="tl-org">Savitribai Phule Pune University, Pune</p>
+            <span class="tl-score">SGPA: 8.58</span>
+            <p class="tl-desc">Advanced coursework in software engineering, AI, data structures, algorithms, and full-stack development. Active in research and project development.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Jun 2021 – Apr 2024</div>
+          <div class="tl-body">
+            <h3 class="tl-title">Bachelor of Computer Application (BCA)</h3>
+            <p class="tl-org">Shivaji University, Kolhapur</p>
+            <span class="tl-score">83.69%</span>
+            <p class="tl-desc">Strong foundation in core programming, algorithms, database management, and system design. Built first real-world web projects during this period.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Jun 2019 – Feb 2021</div>
+          <div class="tl-body">
+            <h3 class="tl-title">H.S.C. — 12th Grade</h3>
+            <p class="tl-org">Maharashtra State Board, Kolhapur</p>
+            <span class="tl-score">86.50%</span>
+            <p class="tl-desc">Science stream with focus on mathematics and computer science fundamentals.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Mar 2019</div>
+          <div class="tl-body">
+            <h3 class="tl-title">S.S.C. — 10th Grade</h3>
+            <p class="tl-org">Maharashtra State Board, Kolhapur</p>
+            <span class="tl-score">89.00%</span>
+            <p class="tl-desc">Developed early interest in problem-solving and computer science.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="sec-block">
+      <div class="sec-h">
+        <h2>Favourite Tools</h2>
+        <span class="sec-h-icon">🛠️</span>
+      </div>
+      <div class="tools-pg">
+        <span class="tool-pill"><img src="../img/icons/icons8-python.svg" alt="">Python</span>
+        <span class="tool-pill"><img src="../img/icons/icons8-django.svg" alt="">Django</span>
+        <span class="tool-pill"><img src="../img/icons/api.png" alt="">Web API</span>
+        <span class="tool-pill"><img src="../img/icons/LLM.png" alt="">LLM</span>
+        <span class="tool-pill"><img src="../img/icons/icon-html.svg" alt="">HTML5</span>
+        <span class="tool-pill"><img src="../img/icons/icon-css.svg" alt="">CSS3</span>
+        <span class="tool-pill"><img src="../img/icons/icons8-javascript.svg" alt="">JavaScript</span>
+        <span class="tool-pill"><img src="../img/icons/icons8-bootstrap.svg" alt="">Bootstrap</span>
+        <span class="tool-pill"><img src="../img/icons/icons8-git.svg" alt="">Git</span>
+        <span class="tool-pill"><img src="../img/icons/icons8-github.svg" alt="">GitHub</span>
+        <span class="tool-pill"><img src="../img/icons/sql.svg" alt="">SQL</span>
+        <span class="tool-pill"><img src="../img/icons/mysql.svg" alt="">MySQL</span>
+        <span class="tool-pill"><img src="../img/icons/mongodb.svg" alt="">MongoDB</span>
+        <span class="tool-pill"><img src="../img/icons/vs.svg" alt="">VS Code</span>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="sec-block">
+      <div class="sec-h">
+        <h2>Certifications</h2>
+        <span class="sec-h-icon">🎓</span>
+      </div>
+      
+      <div class="cert-grid">
+
+        <!-- Card 1 — ADK (Google Skills profile) -->
+        <div class="cert-card">
+          <div class="cert-icon">⚙️</div>
+          <div class="cert-meta">
+            <p class="cert-name">Engineer AI Agents with Agent Development Kit (ADK)</p>
+            <p class="cert-org">Google Cloud · Coursera</p>
+            <p class="cert-desc">Hands-on course covering the design and deployment of AI agents using Google's Agent Development Kit — including multi-agent orchestration, tool integration, and production deployment patterns.</p>
+            <div class="cert-footer">
+              <span class="cert-date-badge">📅 Apr 28, 2026</span>
+              <a class="cert-link"
+                href="https://www.skills.google/public_profiles/d29877e8-67f0-4a22-b399-738330a93cd8"
+                target="_blank" rel="noopener">
+                View Certificate <i class="ph-bold ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 — LLMs (Credly badge) -->
+        <div class="cert-card">
+          <div class="cert-icon">🧠</div>
+          <div class="cert-meta">
+            <p class="cert-name">Introduction to Large Language Models</p>
+            <p class="cert-org">Google Cloud · Coursera</p>
+            <p class="cert-desc">Foundational course on LLM architecture, transformer models, prompt engineering techniques, fine-tuning strategies, and responsible AI deployment at scale.</p>
+            <div class="cert-footer">
+              <span class="cert-date-badge">📅 Mar 4, 2026</span>
+              <a class="cert-link"
+                href="https://www.credly.com/badges/19708f18-1e3b-407b-8938-605d70af3ab1/public_url"
+                target="_blank" rel="noopener">
+                View Badge <i class="ph-bold ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 — Gemini (no link yet) -->
+        <div class="cert-card">
+          <div class="cert-icon">📊</div>
+          <div class="cert-meta">
+            <p class="cert-name">Gemini for Data Scientists and Analysts</p>
+            <p class="cert-org">Google Cloud · Coursera</p>
+            <p class="cert-desc">Applied course on leveraging Gemini's multimodal capabilities for data analysis workflows — covering code generation, data storytelling, and integrating Gemini APIs into analytical pipelines.</p>
+            <div class="cert-footer">
+              <span class="cert-date-badge">📅 Mar 4, 2026</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Awards -->
+    <div class="sec-block">
+      <div class="sec-h">
+        <h2>Awards &amp; Achievements</h2>
+        <span class="sec-h-icon">🏆</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="award-card">
+          <div class="award-icon">🥇</div>
+          <div>
+            <p class="award-title">1st Prize — College Level Hackathon</p>
+            <p class="award-desc">Recognized for excellence in problem-solving and application development. Built a functional project using Python, Java, and JavaScript under time constraints — judged on innovation, code quality, and presentation.</p>
+          </div>
+        </div>
+        <div class="award-card">
+          <div class="award-icon">📈</div>
+          <div>
+            <p class="award-title">Academic Excellence</p>
+            <p class="award-desc">Consistently strong academic performance: MCA SGPA 8.58, BCA 83.69%, HSC 86.50%, SSC 89.00%. Demonstrates sustained commitment to learning and growth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;padding:32px 0 20px;">
+      <a class="btn btn-default btn-hover btn-hover-accent" href="contact.html"><span class="btn-caption">Hire Me</span><i class="ph-bold ph-paper-plane-tilt"></i></a>
+    </div>
+  </div>
+
+  <script src="../js/libs.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

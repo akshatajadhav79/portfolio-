@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact — Akshata Jadhav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/plugins.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <style>
+    /* ════════════════════════════════════════════════════
+       BLUE GRADIENT DESIGN SYSTEM — Akshata Jadhav
+       Font: Plus Jakarta Sans (Professional, Modern)
+       Palette: Deep Navy · Royal Blue · Sky Blue
+    ════════════════════════════════════════════════════ */
+
+    /* ── Universal font override ─────────────────────── */
+    *, body, h1,h2,h3,h4,h5,h6,p,span,a,li,button,input,textarea,select,
+    .menu__link,.btn,.btn-caption,.headline__title,.headline__subtitle,
+    .h2__title,.h2__subtitle,.h2__text,.h3__title,.about-descr__text,
+    .resume-lines__title,.resume-lines__source,.resume-lines__descr,.resume-lines__date,
+    .achievements__number,.achievements__descr,.tools-cards__caption,.teaser__text,
+    .contact-lines__title,.contact-lines__text,.logo__caption p,.avatar__block h6,
+    .gallery__descr h5,.small,.rounded-tag,.trigger__caption,.menu__caption,
+    .pg-title,.pg-subtitle,.pg-label,.back-link,.form-label,.sec-title,
+    .tl-title,.tl-org,.tl-desc,.tl-date,.sec-h h2,.tool-pill,
+    .proj-title,.proj-desc,.proj-category,.filter-btn,
+    .mw-section-title,.mw-section-desc,.research-title,.research-abstract,
+    .info-label,.info-value,.avail-text,.avail-sub,.social-link-label,.social-link-handle,
+    .stat-number,.stat-label,.skill-chip,.skill-group-label,
+    .interest-title,.interest-desc,.about-card-label,.about-card-value,
+    .cert-title,.cert-org,.cert-date,.cert-desc,.cert-name {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Page title gradient ─────────────────────────── */
+    .pg-title {
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    /* ── Main headline (index) ───────────────────────── */
+    .headline__title {
+      font-size: clamp(36px,5.5vw,68px) !important;
+      font-weight: 800 !important;
+      line-height: 1.06 !important;
+      letter-spacing: -0.025em !important;
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    /* ── Section headings ────────────────────────────── */
+    .h2__title, .mw-section-title, .sec-title {
+      font-weight: 800 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    /* ── Stat / achievement numbers ──────────────────── */
+    .stat-number, .achievements__number {
+      background: linear-gradient(135deg, #93C5FD 0%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      font-weight: 800 !important;
+    }
+
+    /* ── Dividers ─────────────────────────────────────── */
+    .pg-divider, .mw-divider {
+      background: linear-gradient(90deg, #2563EB, #38BDF8) !important;
+    }
+
+    /* ── Card hover glow ─────────────────────────────── */
+    .proj-card:hover, .info-card:hover, .interest-card:hover,
+    .stat-card:hover, .award-card:hover, .research-card:hover {
+      border-color: #2563EB !important;
+      box-shadow: 0 16px 48px rgba(37,99,235,.2) !important;
+    }
+
+    /* ── Filter active ───────────────────────────────── */
+    .filter-btn.active, .filter-btn:hover {
+      background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important;
+      border-color: transparent !important;
+    }
+
+    /* ── Form focus ──────────────────────────────────── */
+    .form-input:focus, .form-textarea:focus {
+      border-color: #2563EB !important;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.15) !important;
+    }
+
+    /* ── Download bar ────────────────────────────────── */
+    .dl-bar { background: linear-gradient(135deg, #1D4ED8 0%, #38BDF8 100%) !important; }
+    .dl-btn { color: #1D4ED8 !important; }
+
+    /* ── Social hover ────────────────────────────────── */
+    .social-link:hover { border-color: #2563EB !important; }
+
+    /* ── Availability dot pulse ──────────────────────── */
+    .avail-dot { background: #38BDF8 !important; }
+    @keyframes pulse-blue {
+      0%,100%{box-shadow:0 0 0 0 rgba(56,189,248,.5)}
+      50%{box-shadow:0 0 0 7px rgba(56,189,248,0)}
+    }
+    .avail-dot { animation: pulse-blue 2s infinite !important; }
+
+    /* ── Icon backgrounds ────────────────────────────── */
+    .research-icon, .cert-icon {
+      background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important;
+    }
+
+    /* ── Skill chip dot ──────────────────────────────── */
+    .skill-chip-dot { background: #38BDF8 !important; }
+    .skill-chip:hover { border-color: #2563EB !important; color: #2563EB !important; }
+    .tool-pill:hover { border-color: #2563EB !important; color: #2563EB !important; }
+
+    /* ── Tl score pill ───────────────────────────────── */
+    .tl-score { background: rgba(37,99,235,.14) !important; color: #60A5FA !important; }
+
+    /* ── Submit button ───────────────────────────────── */
+    .submit-btn { background: linear-gradient(135deg,#1D4ED8,#38BDF8) !important; }
+
+    /* ── Success message ─────────────────────────────── */
+    .success-msg { background:#eff6ff !important; border-color:#bfdbfe !important; }
+    .success-msg p { color: #1D4ED8 !important; }
+
+    /* ── Proj thumb placeholder gradients ────────────── */
+    .proj-thumb { background: linear-gradient(135deg,#1e3a8a,#2563EB) !important; }
+
+    .pg-wrap { max-width: 980px; margin: 0 auto; padding: 56px 28px 100px; }
+    .back-link { display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-bottom:52px;transition:gap .2s; }
+    .back-link:hover { gap:14px; }
+    .pg-label { display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px; }
+    .pg-title { font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.12;margin:0 0 14px; }
+    .pg-subtitle { font-size:15px;line-height:1.8;color:var(--text-2);max-width:580px; }
+    .pg-divider { width:52px;height:3px;margin-top:24px;margin-bottom:56px;background:linear-gradient(90deg,#2563EB,#38BDF8);border-radius:4px; }
+
+    /* Layout */
+    .contact-layout { display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:start; }
+    @media(max-width:768px){ .contact-layout { grid-template-columns:1fr; } }
+
+    /* Form */
+    .contact-form-wrap {}
+    .form-row { display:grid;grid-template-columns:1fr 1fr;gap:16px; }
+    @media(max-width:500px){ .form-row { grid-template-columns:1fr; } }
+    .form-group { margin-bottom:20px; }
+    .form-label { display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);margin-bottom:8px; }
+    .form-input, .form-textarea {
+      width:100%; padding:13px 16px; font-size:14px;
+      background:var(--card); border:1px solid var(--border);
+      border-radius:10px; color:var(--text);
+      font-family:inherit; transition:border-color .2s;
+      box-sizing:border-box;
+    }
+    .form-input:focus, .form-textarea:focus { outline:none; border-color:var(--accent); }
+    .form-textarea { min-height:140px; resize:vertical; }
+    .form-select { appearance:none; cursor:pointer; }
+    .submit-btn { width:100%; padding:14px; font-size:14px;font-weight:700; background:var(--accent);color:#fff;border:none;border-radius:10px;cursor:pointer;transition:opacity .2s,transform .2s;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px; }
+    .submit-btn:hover { opacity:.88;transform:translateY(-1px); }
+    .success-msg { background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:20px;text-align:center;display:none; }
+    .success-msg p { color:#1D4ED8;font-weight:600;margin:0; }
+
+    /* Sidebar info */
+    .contact-info { display:flex;flex-direction:column;gap:16px; }
+    .info-card { background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 24px;display:flex;align-items:flex-start;gap:16px;transition:border-color .25s,transform .25s; }
+    .info-card:hover { border-color:var(--accent);transform:translateY(-2px); }
+    .info-icon { width:44px;height:44px;border-radius:12px;background:color-mix(in srgb,var(--accent) 12%,transparent);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0; }
+    .info-label { font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:4px; }
+    .info-value { font-size:14px;font-weight:600; }
+    .info-value a { color:var(--text);text-decoration:none; }
+    .info-value a:hover { color:var(--accent); }
+
+    /* Socials */
+    .socials-section { margin-top:8px; }
+    .socials-title { font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-2);margin-bottom:14px; }
+    .socials-row { display:flex;flex-direction:column;gap:10px; }
+    .social-link { display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--card);border:1px solid var(--border);border-radius:12px;text-decoration:none;transition:all .2s; }
+    .social-link:hover { border-color:var(--accent);transform:translateX(4px); }
+    .social-link-icon { font-size:18px;width:28px;text-align:center; }
+    .social-link-label { font-size:13px;font-weight:600;color:var(--text); }
+    .social-link-handle { font-size:12px;color:var(--accent);margin-left:auto; }
+
+    /* Availability badge */
+    .avail-badge { display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:16px; }
+    .avail-dot { width:10px;height:10px;border-radius:50%;background:#38BDF8;flex-shrink:0;animation:pulse-green 2s infinite; }
+    @keyframes pulse-green { 0%,100%{box-shadow:0 0 0 0 rgba(56,189,248,.4)} 50%{box-shadow:0 0 0 6px rgba(56,189,248,0)} }
+    .avail-text { font-size:13px;font-weight:700; }
+    .avail-sub { font-size:12px;color:var(--text-2); }
+  </style>
+
+  <!-- Google Fonts — Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header d-flex justify-content-between">
+    <div class="header__navigation">
+      <nav id="menu" class="menu">
+        <ul class="menu__list d-flex justify-content-start">
+          <li class="menu__item"><a class="menu__link btn" href="../index.html"><span class="menu__caption">Home</span><i class="ph-bold ph-house-simple"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="portfolio.html"><span class="menu__caption">Portfolio</span><i class="ph-bold ph-squares-four"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="my_work.html"><span class="menu__caption">My Work</span><i class="ph-bold ph-briefcase"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="about.html"><span class="menu__caption">About Me</span><i class="ph-bold ph-user"></i></a></li>
+          <li class="menu__item"><a class="menu__link btn" href="resume.html"><span class="menu__caption">Resume</span><i class="ph-bold ph-article"></i></a></li>
+          <li class="menu__item menu__item--active"><a class="menu__link btn" href="contact.html"><span class="menu__caption">Contact</span><i class="ph-bold ph-envelope"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__controls d-flex justify-content-end">
+      <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+      <a class="header__trigger btn" href="mailto:akshata542003@gmail.com?subject=Message%20from%20your%20site"><span class="trigger__caption">Let's Talk</span><i class="ph-bold ph-chat-dots"></i></a>
+    </div>
+  </header>
+
+  <div class="pg-wrap">
+    <a class="back-link" href="../index.html"><i class="ph-bold ph-arrow-left"></i> Back to Home</a>
+
+    <p class="pg-label">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="currentColor"><path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/></svg>
+      Contact
+    </p>
+    <h1 class="pg-title">Let's make something<br>awesome together!</h1>
+    <p class="pg-subtitle">Have a project in mind, want to collaborate, or just want to say hello? Drop me a message and I'll get back to you as soon as possible.</p>
+    <div class="pg-divider"></div>
+
+    <div class="contact-layout">
+
+      <!-- Form -->
+      <div class="contact-form-wrap">
+        <div class="success-msg" id="successMsg">
+          <p>🎉 Thanks for your message! I'll get back to you within 24 hours.</p>
+        </div>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name *</label>
+              <input class="form-input" type="text" placeholder="Akshata Jadhav" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Email *</label>
+              <input class="form-input" type="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Company / Organization</label>
+            <input class="form-input" type="text" placeholder="Your Company (optional)">
+          </div>
+          <div class="form-group">
+            <label class="form-label">I'm interested in *</label>
+            <select class="form-input form-select" required>
+              <option value="">Select a topic...</option>
+              <option>Full Stack Development</option>
+              <option>AI / LLM Integration</option>
+              <option>Python / Django Project</option>
+              <option>React Frontend</option>
+              <option>Logo / Brand Design</option>
+              <option>Research Collaboration</option>
+              <option>Job / Internship Opportunity</option>
+              <option>Just saying hello 👋</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Message *</label>
+            <textarea class="form-textarea" placeholder="Tell me about your project, idea, or question..." required></textarea>
+          </div>
+          <button class="submit-btn" type="submit">
+            <i class="ph-bold ph-paper-plane-tilt"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="contact-info">
+
+        <!-- Availability -->
+        <div class="avail-badge">
+          <span class="avail-dot"></span>
+          <div>
+            <div class="avail-text">Available for work</div>
+            <div class="avail-sub">Open to freelance &amp; full-time roles</div>
+          </div>
+        </div>
+
+        <!-- Contact cards -->
+        <div class="info-card">
+          <div class="info-icon">📧</div>
+          <div>
+            <p class="info-label">Email</p>
+            <p class="info-value"><a href="mailto:akshata542003@gmail.com">akshata542003@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <div>
+            <p class="info-label">Location</p>
+            <p class="info-value">Kolhapur / Pune, Maharashtra, India</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">⏱️</div>
+          <div>
+            <p class="info-label">Response Time</p>
+            <p class="info-value">Usually within 24 hours</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🌐</div>
+          <div>
+            <p class="info-label">Portfolio</p>
+            <p class="info-value"><a href="https://portfolio-nine-topaz-26.vercel.app/" target="_blank">portfolio-nine-topaz-26.vercel.app</a></p>
+          </div>
+        </div>
+
+        <!-- Socials -->
+        <div class="socials-section">
+          <p class="socials-title">Find me on</p>
+          <div class="socials-row">
+            <a class="social-link" href="https://www.linkedin.com/in/akshata-jadhav-782679255" target="_blank">
+              <span class="social-link-icon"><i class="ph-bold ph-linkedin-logo"></i></span>
+              <span class="social-link-label">LinkedIn</span>
+              <span class="social-link-handle">akshata-jadhav →</span>
+            </a>
+            <a class="social-link" href="https://github.com/akshatajadhav79" target="_blank">
+              <span class="social-link-icon"><i class="ph-bold ph-github-logo"></i></span>
+              <span class="social-link-label">GitHub</span>
+              <span class="social-link-handle">akshatajadhav79 →</span>
+            </a>
+            <a class="social-link" href="https://akshata5.pythonanywhere.com/" target="_blank">
+              <span class="social-link-icon"><i class="ph-bold ph-globe"></i></span>
+              <span class="social-link-label">Live Project</span>
+              <span class="social-link-handle">Build Foridge →</span>
+            </a>
+            <a class="social-link" href="mailto:akshata542003@gmail.com">
+              <span class="social-link-icon"><i class="ph-bold ph-envelope"></i></span>
+              <span class="social-link-label">Email Direct</span>
+              <span class="social-link-handle">Send mail →</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/libs.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      // Replace with your actual form handler (Formspree, EmailJS, etc.)
+      // For now show success message
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
